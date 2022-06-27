@@ -3,13 +3,49 @@ class Header extends HTMLElement {
     this.innerHTML = `
       <header>
         <a href="/index.html" class="logo">
-          <img src="../public/small-logo.svg" alt="logo"/>
+          <img src="/public/small-logo.svg" alt="logo"/>
           <p class="logo-name">Exceed Team</p>
         </a>
         <div class="navigation">
           <a class="nav-item hover-text" href="/pages/cases.html">Кейсы</a>
-          <a class="nav-item hover-text" href="/pages/cases.html">Услуги</a>
-          <img class="nav-burger" src="../public/menu-hamburger.svg" alt="burger"/>
+          <a class="nav-item hover-text" href="/pages/services.html">Услуги</a>
+          <img id="nav-burger" src="/public/menu-hamburger.svg" alt="burger"/>
+        </div>
+
+        <div id="burger-menu">
+          <div class="burger-menu-wrapper">
+            <div class="burger-header">
+              <a href="/index.html" class="logo">
+                <img src="/public/small-logo.svg" alt="logo"/>
+                <p class="logo-name-menu">Exceed Team</p>
+              </a>
+              <img id="burger-close-icon" src="/public/components/header/close.svg" alt="close icon">
+            </div>
+            <div class="burger-body">
+              <div class="menu-pannel">
+                <a class="burger-text-link hover-text" href="/pages/team.html">Команда</a>
+                <a class="burger-text-link hover-text" href="/pages/cases.html">Кейсы</a>
+                <a class="burger-text-link hover-text" href="/pages/services.html">Услуги</a>
+                <a class="burger-text-link hover-text" href="/pages/team.html">Контакты</a>
+              </div>
+              <div class="menu-pannel">
+                <a class="burger-text-link hover-text" href="/pages/blog.html">Блог</a>
+                <a class="burger-text-link hover-text" href="/pages/team.html">Отрасли</a>
+                <a class="burger-text-link hover-text" href="/pages/team.html">Начать работу</a>
+                <div class="social-links social-links-burger">
+                  <a href="#" target="_blank"><img src="/public/components/footer/media_social_linkedIn_icon.svg" alt="linked in link"></a>
+                  <a href="#" target="_blank"><img src="/public/components/footer/media_social_vk_icon.svg" alt="vk link"></a>
+                  <a href="#" target="_blank"><img src="/public/components/footer/media_social_behance_icon.svg" alt="behance link"></a>
+                  <a href="#" target="_blank"><img src="/public/components/footer/media_social_dribble_icon.svg" alt="dribble link"></a>
+                </div>
+                <div class="languages">
+                  <p class="language language-current">Rus</p>
+                  <p class="language">Eng</p>
+                </div>
+              </div>
+            </div>
+            <div class="burger-background"></div>
+          </div>
         </div>
       </header>
     `;
@@ -36,10 +72,95 @@ class ReviewCard extends HTMLElement {
           </div>
           <p class="header-right-date">${date}</p>
         </div>
-        <img class="quote" src="./public/homepage/quote.svg" alt="quote" />
+        <img class="quote" src="/public/homepage/quote.svg" alt="quote" />
         <p class="review-text">${review}</p>
         <button class="go-clatch">На CLUTCH</button>
         <div class="card-background"></div>
+      </div>
+    `;
+  }
+}
+
+class CasesGrid extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="cases-grid">
+        <div class="case-item hover-zone-1">
+          <div class="case-item-text">
+            <h3>Save Health</h3>
+            <p>CRM-системы для частной клиники</p>
+          </div>
+          <img class="case-item-img save-health" src="/public/components/cases/save-health.svg" alt="save health" />
+        </div>
+        <div class="case-item hover-zone-2">
+          <div class="case-item-text">
+            <h3>Ukie</h3>
+            <p>Сайт для британской геймдев-индустрии</p>
+          </div>
+          <img class="case-item-img ukie" src="/public/components/cases/ukie.svg" alt="save health" />
+        </div>
+        <div class="case-item hover-zone-3">
+          <div class="case-item-text">
+            <h3>Real Estate</h3>
+            <p>CRM-система для риэлторского агентства</p>
+          </div>
+          <img class="case-item-img real-estate" src="/public/components/cases/real-estate.svg" alt="Real Estate" />
+        </div>
+        <div class="case-item hover-zone-4 case-item-joined-first">
+          <div class="case-item-text">
+            <h3>FinPro</h3>
+            <p>CRM-система для финтех стартапа, со встроенной функцией звонков</p>
+          </div>
+          <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
+        </div>
+        <div class="case-item hover-zone-5">
+          <div class="case-item-text">
+            <h3>What Song</h3>
+            <p>Онлайн-сервис, для поиска популярные треков из любимых фильмов или сериалов</p>
+          </div>
+          <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
+        </div>
+        <div class="case-item hover-zone-6">
+          <div class="case-item-text">
+            <h3>Continental Clothing Co</h3>
+            <p>Веб-платформа для продажи одежды с готовыми к печати принтами</p>
+          </div>
+          <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
+        </div>
+        <div class="case-item hover-zone-7">
+          <div class="case-item-text">
+            <h3>Palmetto Park</h3>
+            <p>Платформа для размещения объявлений о продаже недвижимости</p>
+          </div>
+          <img class="case-item-img palmetto-back" src="/public/components/cases/palmetto-back.png" alt="palmetto back" />
+          <img class="case-item-img palmetto-front" src="/public/components/cases/palmetto-front.png" alt="palmetto front" />
+        </div>
+        <div class="case-item hover-zone-8">
+          <div class="case-item-text">
+            <h3>GaiaHerbs</h3>
+            <p>Интернет-магазин здорового питания</p>
+          </div>
+          <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
+        </div>
+        <div class="case-item hover-zone-9">
+          <div class="case-item-text">
+            <h3>Bitpool</h3>
+            <p>Технологическая экосистема, которая позволяет контролировать ресурсы и эффективность</p>
+          </div>
+          <div class="rotate">
+            <img class="case-item-img bitpool-passion-hovered" src="/public/components/cases/bitpool-passion.png" alt="Bitpool passion" />
+            <img class="case-item-img bitpool-process-hovered" src="/public/components/cases/bitpool-process.png" alt="Bitpool process" />
+            <img class="case-item-img bitpool-passion" src="/public/components/cases/bitpool-passion.png" alt="Bitpool passion" />
+            <img class="case-item-img bitpool-process" src="/public/components/cases/bitpool-process.png" alt="Bitpool process" />
+          </div>
+        </div>
+        <div class="case-item hover-zone-10 case-item-joined-second">
+          <div class="case-item-text">
+            <h3>Kopi-d Co</h3>
+            <p>Быстрый, легкий и SEO-оптимизированный интернет-магазин</p>
+          </div>
+          <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+        </div>
       </div>
     `;
   }
@@ -55,7 +176,7 @@ class InfoCard extends HTMLElement {
     let main = `
       <div class="info-card">
         <div class="hover-effect"></div>
-        <img class="hover-icon" src="../public/components/infoCard/${hoverSVG}" alt="hover icon" />
+        <img class="hover-icon" src="/public/components/infoCard/${hoverSVG}" alt="hover icon" />
         <p class="info-card-title">${vals}</p>
         <ul class="info-card-list">
     `;
@@ -78,28 +199,28 @@ class TeamCard extends HTMLElement {
         </div>
         <div class="team-grid">
           <div class="team-card team-card-1">
-            <img class="team-card-img" src="./public/homepage/team-1.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-1.png" alt="team pic" />
           </div>
           <div class="team-card team-card-2">
-            <img class="team-card-img" src="./public/homepage/team-2.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-2.png" alt="team pic" />
           </div>
           <div class="team-card team-card-3">
-            <img class="team-card-img" src="./public/homepage/team-3.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-3.png" alt="team pic" />
           </div>
           <div class="team-card team-card-4">
-            <img class="team-card-img" src="./public/homepage/team-4.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-4.png" alt="team pic" />
           </div>
           <div class="team-card team-card-5">
-            <img class="team-card-img" src="./public/homepage/team-5.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-5.png" alt="team pic" />
           </div>
           <div class="team-card team-card-6">
-            <img class="team-card-img" src="./public/homepage/team-6.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-6.png" alt="team pic" />
           </div>
           <div class="team-card team-card-7">
-            <img class="team-card-img" src="./public/homepage/team-7.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-7.png" alt="team pic" />
           </div>
           <div class="team-card team-card-8">
-            <img class="team-card-img" src="./public/homepage/team-8.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-8.png" alt="team pic" />
           </div>
         </div>
       </div>
@@ -115,13 +236,64 @@ class Rewards extends HTMLElement {
           <h2 class="section-name">Наши награды</h2>
         </div>
         <div class="rewards-scroll">
-          <img class="reward" src="./public/homepage/rewards/nexmo.png" alt="nexmo" />
-          <img class="reward" src="./public/homepage/rewards/stripe.png" alt="stripe" />
-          <img class="reward" src="./public/homepage/rewards/google-devs.png" alt="google developers" />
-          <img class="reward" src="./public/homepage/rewards/mongoDB.png" alt="mongoDB" />
-          <img class="reward" src="./public/homepage/rewards/stripe.png" alt="stripe" />
-          <img class="reward" src="./public/homepage/rewards/google-devs.png" alt="google developers" />
-          <img class="reward" src="./public/homepage/rewards/mongoDB.png" alt="mongoDB" />
+          <img class="reward" src="/public/homepage/rewards/nexmo.png" alt="nexmo" />
+          <img class="reward" src="/public/homepage/rewards/stripe.png" alt="stripe" />
+          <img class="reward" src="/public/homepage/rewards/google-devs.png" alt="google developers" />
+          <img class="reward" src="/public/homepage/rewards/mongoDB.png" alt="mongoDB" />
+          <img class="reward" src="/public/homepage/rewards/google-cloud.png" alt="google cloud" />
+          <img class="reward" src="/public/homepage/rewards/aws.png" alt="aws" />
+          <img class="reward" src="/public/homepage/rewards/psm.png" alt="psm" />
+          <img class="reward" src="/public/homepage/rewards/open-js.png" alt="open js" />
+          <img class="reward" src="/public/homepage/rewards/cancanit.png" alt="cancanit js" />
+          <img class="reward" src="/public/homepage/rewards/twilio.png" alt="twilio" />
+          <img class="reward" src="/public/homepage/rewards/microsoft-gold.png" alt="microsoft gold" />
+        </div>
+      </div>
+    `;
+  }
+}
+
+class FeedbackCarousel extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="feedback">
+        <div class="section-header">
+          <h2 class="section-name name-margin">Отзывы</h2>
+        </div>
+        <div class="carousel-wrapper">
+          <div id="carousel">
+            <review-card
+              name="Паша Техник"
+              company="Director at Mercury Digital Assets Ltd"
+              avatar="https://cdn.ruposters.ru/newslead/5/5662c6565b298da482a989ce90009640.jpg"
+              date="17.03.2019"
+              review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
+            ></review-card>
+            <review-card
+              name="Паша Техник"
+              company="Director at Mercury Digital Assets Ltd"
+              avatar="https://cdn.ruposters.ru/newslead/5/5662c6565b298da482a989ce90009640.jpg"
+              date="17.03.2019"
+              review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
+            ></review-card>
+            <review-card
+              name="Паша Техник"
+              company="Director at Mercury Digital Assets Ltd"
+              avatar="https://cdn.ruposters.ru/newslead/5/5662c6565b298da482a989ce90009640.jpg"
+              date="17.03.2019"
+              review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
+            ></review-card>
+          </div>
+        </div>
+
+        <div class="slide-counter">
+          <img src="/public/homepage/arrow-left.svg" alt="previous slide" id="prev-slide"/>
+          <span>
+            <span id="current-slide"></span>
+            <span>/</span>
+            <span id="max-slide"></span>
+          </span>
+          <img src="/public/homepage/arrow-right.svg" alt="next slide" id="next-slide"/>
         </div>
       </div>
     `;
@@ -145,20 +317,20 @@ class Request extends HTMLElement {
           <input class="form-field" type="email" placeholder="Электронная почта*" />
           <textarea class="form-field textarea">О проекте</textarea>
           <div class="tags-list">
-            <div class="tag clickable">CRM</div>
-            <div class="tag tag-pressed clickable">Мобильное приложение</div>
-            <div class="tag clickable">Сайт</div>
-            <div class="tag clickable">Интернет-магазин</div>
-            <div class="tag clickable">Landing-page</div>
-            <div class="tag clickable">Редизайн</div>
-            <div class="tag clickable">MVP</div>
-            <div class="tag clickable">Расширение команды</div>
-            <div class="tag clickable">Другое</div>
+            <div class="tag">CRM</div>
+            <div class="tag tag-pressed">Мобильное приложение</div>
+            <div class="tag">Сайт</div>
+            <div class="tag">Интернет-магазин</div>
+            <div class="tag">Landing-page</div>
+            <div class="tag">Редизайн</div>
+            <div class="tag">MVP</div>
+            <div class="tag">Расширение команды</div>
+            <div class="tag">Другое</div>
           </div>
           <input type="file" id="img-upload" style="display:none"/>
           <label for="img-upload">
             <div class="attach-file">
-              <img src="./public/homepage/Paperclip.svg" alt="attach file" />
+              <img src="/public/homepage/Paperclip.svg" alt="attach file" />
               <p>Прикрепите документ</p>
             </div>
           </label>
@@ -170,6 +342,23 @@ class Request extends HTMLElement {
   }
 }
 
+class BlogCard extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="blog-grid">
+        <div class="blog-grid-card">
+          <img class="blog-image" src="/public/blog/blog-demo.png" alt="blog image" />
+          <span class="tags-list">
+            <span class="tag">sdfsdf</span>
+            <span class="tag">sdf2222sdf</span>
+          </span>
+          <h4 class="blog-card-title">Как бизнесу поддерживать связь с клиентом</h4>
+          <p class="blog-card-text">Способы понять аудиторию вашего бренда и выстроить с ними отношения.</p>
+        </div>
+    `;
+  }
+}
+
 class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -177,7 +366,7 @@ class Footer extends HTMLElement {
         <div class="footer-content">
           <div class="footer-left">
             <div class="logo">
-              <img src="../public/small-logo.svg" alt="logo"/>
+              <img src="/public/small-logo.svg" alt="logo"/>
               <p class="logo-name">Exceed Team</p>
             </div>
             <p class="footer-info">©Exceed Team 2016-2022<br/>Все права защищены</p>
@@ -186,10 +375,11 @@ class Footer extends HTMLElement {
             <div class="section">
               <h5 class="footer-section-name">Компания</h5>
               <ul class="footer-section-list">
-                <li><a href="#">Портфолио</a></li>
-                <li><a href="#">Команда</a></li>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="/pages/cases.html">Кейсы</a></li>
+                <li><a href="/pages/services.html">Услуги</a></li>
+                <li><a href="/pages/team.html">Команда</a></li>
+                <li><a href="/pages/blog.html">Блог</a></li>
+                <li><a href="/pages/contacts.html">Контакты</a></li>
               </ul>
             </div>
             <div class="section">
@@ -205,14 +395,14 @@ class Footer extends HTMLElement {
             <div class="section">
               <h5 class="footer-section-name">Контакты</h5>
               <div class="email">
-                <img src="./public/components/footer/at-email.svg" alt="email icon" />
+                <img src="/public/components/footer/at-email.svg" alt="email icon" />
                 <a class="email-link" href="mailto:hello@exceed-team.com">hello@exceed-team.com</a>
               </div>
               <div class="social-links">
-                <a href="#"><img src="./public/components/footer/media_social_linkedIn_icon.svg" alt="linked in link"></a>
-                <a href="#"><img src="./public/components/footer/media_social_vk_icon.svg" alt="vk link"></a>
-                <a href="#"><img src="./public/components/footer/media_social_behance_icon.svg" alt="behance link"></a>
-                <a href="#"><img src="./public/components/footer/media_social_dribble_icon.svg" alt="dribble link"></a>
+                <a href="#" target="_blank"><img src="/public/components/footer/media_social_linkedIn_icon.svg" alt="linked in link"></a>
+                <a href="#" target="_blank"><img src="/public/components/footer/media_social_vk_icon.svg" alt="vk link"></a>
+                <a href="#" target="_blank"><img src="/public/components/footer/media_social_behance_icon.svg" alt="behance link"></a>
+                <a href="#" target="_blank"><img src="/public/components/footer/media_social_dribble_icon.svg" alt="dribble link"></a>
               </div>
             </div>
           </div>
@@ -228,7 +418,9 @@ class Footer extends HTMLElement {
 customElements.define('main-header', Header);
 customElements.define('review-card', ReviewCard);
 customElements.define('grey-card', InfoCard);
+customElements.define('cases-grid', CasesGrid);
 customElements.define('team-grid', TeamCard);
+customElements.define('feedback-carousel', FeedbackCarousel);
 customElements.define('rewards-carousel', Rewards);
 customElements.define('request-form', Request);
 customElements.define('main-footer', Footer);
