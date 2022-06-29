@@ -33,10 +33,10 @@ class Header extends HTMLElement {
                 <a class="burger-text-link hover-text" href="/pages/team.html">Отрасли</a>
                 <a class="burger-text-link hover-text" href="/pages/team.html">Начать работу</a>
                 <div class="social-links social-links-burger">
-                  <a href="#" target="_blank"><img src="/public/components/footer/media_social_linkedIn_icon.svg" alt="linked in link"></a>
-                  <a href="#" target="_blank"><img src="/public/components/footer/media_social_vk_icon.svg" alt="vk link"></a>
-                  <a href="#" target="_blank"><img src="/public/components/footer/media_social_behance_icon.svg" alt="behance link"></a>
-                  <a href="#" target="_blank"><img src="/public/components/footer/media_social_dribble_icon.svg" alt="dribble link"></a>
+                  <a href="https://www.linkedin.com/in/exceed-team-63aaab145/" target="_blank"><img src="/public/components/footer/media_social_linkedIn_icon.svg" alt="linked in link"></a>
+                  <a href="https://vk.com/exceed.team" target="_blank"><img src="/public/components/footer/media_social_vk_icon.svg" alt="vk link"></a>
+                  <a href="https://www.behance.net/exceed-team" target="_blank"><img src="/public/components/footer/media_social_behance_icon.svg" alt="behance link"></a>
+                  <a href="https://dribbble.com/ExceedTeam" target="_blank"><img src="/public/components/footer/media_social_dribble_icon.svg" alt="dribble link"></a>
                 </div>
                 <div class="languages">
                   <p class="language language-current">Rus</p>
@@ -85,49 +85,49 @@ class CasesGrid extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <div class="cases-grid">
-        <div class="case-item hover-zone-1">
-          <div class="case-item-text">
+        <div class="case-item grid-cell-1 hover-zone-1">
+          <div class="case-item-text ">
             <h3>Save Health</h3>
             <p>CRM-системы для частной клиники</p>
           </div>
           <img class="case-item-img save-health" src="/public/components/cases/save-health.svg" alt="save health" />
         </div>
-        <div class="case-item hover-zone-2">
+        <div class="case-item grid-cell-2 hover-zone-2">
           <div class="case-item-text">
             <h3>Ukie</h3>
             <p>Сайт для британской геймдев-индустрии</p>
           </div>
           <img class="case-item-img ukie" src="/public/components/cases/ukie.svg" alt="save health" />
         </div>
-        <div class="case-item hover-zone-3">
+        <div class="case-item grid-cell-3 hover-zone-3">
           <div class="case-item-text">
             <h3>Real Estate</h3>
             <p>CRM-система для риэлторского агентства</p>
           </div>
           <img class="case-item-img real-estate" src="/public/components/cases/real-estate.svg" alt="Real Estate" />
         </div>
-        <div class="case-item hover-zone-4 case-item-joined-first">
+        <div class="case-item grid-cell-4 hover-zone-4 case-item-joined-first">
           <div class="case-item-text">
             <h3>FinPro</h3>
             <p>CRM-система для финтех стартапа, со встроенной функцией звонков</p>
           </div>
           <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
         </div>
-        <div class="case-item hover-zone-5">
+        <div class="case-item grid-cell-5 hover-zone-5">
           <div class="case-item-text">
             <h3>What Song</h3>
             <p>Онлайн-сервис, для поиска популярные треков из любимых фильмов или сериалов</p>
           </div>
           <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
         </div>
-        <div class="case-item hover-zone-6">
+        <div class="case-item grid-cell-6 hover-zone-6">
           <div class="case-item-text">
             <h3>Continental Clothing Co</h3>
             <p>Веб-платформа для продажи одежды с готовыми к печати принтами</p>
           </div>
           <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
         </div>
-        <div class="case-item hover-zone-7">
+        <div class="case-item grid-cell-7 hover-zone-7">
           <div class="case-item-text">
             <h3>Palmetto Park</h3>
             <p>Платформа для размещения объявлений о продаже недвижимости</p>
@@ -135,14 +135,14 @@ class CasesGrid extends HTMLElement {
           <img class="case-item-img palmetto-back" src="/public/components/cases/palmetto-back.png" alt="palmetto back" />
           <img class="case-item-img palmetto-front" src="/public/components/cases/palmetto-front.png" alt="palmetto front" />
         </div>
-        <div class="case-item hover-zone-8">
+        <div class="case-item grid-cell-8 hover-zone-8">
           <div class="case-item-text">
             <h3>GaiaHerbs</h3>
             <p>Интернет-магазин здорового питания</p>
           </div>
           <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
         </div>
-        <div class="case-item hover-zone-9">
+        <div class="case-item grid-cell-9 hover-zone-9">
           <div class="case-item-text">
             <h3>Bitpool</h3>
             <p>Технологическая экосистема, которая позволяет контролировать ресурсы и эффективность</p>
@@ -154,12 +154,111 @@ class CasesGrid extends HTMLElement {
             <img class="case-item-img bitpool-process" src="/public/components/cases/bitpool-process.png" alt="Bitpool process" />
           </div>
         </div>
-        <div class="case-item hover-zone-10 case-item-joined-second">
+        <div class="case-item grid-cell-10 hover-zone-10 case-item-joined-second">
           <div class="case-item-text">
             <h3>Kopi-d Co</h3>
             <p>Быстрый, легкий и SEO-оптимизированный интернет-магазин</p>
           </div>
           <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+        </div>
+      </div>
+    `;
+  }
+}
+
+class CasesCarousel extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div>
+        <div class="cases-carousel">
+          <div class="cases-slider">
+            <div id="cases-carousel-container">
+              <div class="cases-carousel-item grid-cell-1">
+                <div class="case-item-text case-item-text-mobile">
+                  <h3>Save Health</h3>
+                  <p>CRM-системы для частной клиники</p>
+                </div>
+                <img class="case-item-img save-health" src="/public/components/cases/save-health.svg" alt="save health" />
+              </div>
+              <div class="cases-carousel-item grid-cell-2">
+                <div class="case-item-text case-item-text-mobile">
+                  <h3>Ukie</h3>
+                  <p>Сайт для британской геймдев-индустрии</p>
+                </div>
+                <img class="case-item-img ukie" src="/public/components/cases/ukie.svg" alt="save health" />
+              </div>
+              <div class="cases-carousel-item grid-cell-3">
+                <div class="case-item-text case-item-text-mobile">
+                  <h3>Real Estate</h3>
+                  <p>CRM-система для риэлторского агентства</p>
+                </div>
+                <img class="case-item-img real-estate" src="/public/components/cases/real-estate.svg" alt="Real Estate" />
+              </div>
+              <div class="cases-carousel-item grid-cell-4">
+                <div class="case-item-text case-item-text-mobile">
+                  <h3>FinPro</h3>
+                  <p>CRM-система для финтех стартапа, со встроенной функцией звонков</p>
+                </div>
+                <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
+              </div>
+              <div class="cases-carousel-item grid-cell-5">
+                <div class="case-item-text case-item-text-mobile">
+                  <h3>What Song</h3>
+                  <p>Онлайн-сервис, для поиска популярные треков из любимых фильмов или сериалов</p>
+                </div>
+                <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
+              </div>
+              <div class="cases-carousel-item grid-cell-6">
+                <div class="case-item-text case-item-text-mobile">
+                  <h3>Continental Clothing Co</h3>
+                  <p>Веб-платформа для продажи одежды с готовыми к печати принтами</p>
+                </div>
+                <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
+              </div>
+              <div class="cases-carousel-item grid-cell-7">
+                <div class="case-item-text case-item-text-mobile">
+                  <h3>Palmetto Park</h3>
+                  <p>Платформа для размещения объявлений о продаже недвижимости</p>
+                </div>
+                <img class="case-item-img palmetto-back" src="/public/components/cases/palmetto-back.png" alt="palmetto back" />
+                <img class="case-item-img palmetto-front" src="/public/components/cases/palmetto-front.png" alt="palmetto front" />
+              </div>
+              <div class="cases-carousel-item grid-cell-8">
+                <div class="case-item-text case-item-text-mobile">
+                  <h3>GaiaHerbs</h3>
+                  <p>Интернет-магазин здорового питания</p>
+                </div>
+                <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
+              </div>
+              <div class="cases-carousel-item grid-cell-9">
+                <div class="case-item-text case-item-text-mobile">
+                  <h3>Bitpool</h3>
+                  <p>Технологическая экосистема, которая позволяет контролировать ресурсы и эффективность</p>
+                </div>
+                <div class="rotate">
+                  <img class="case-item-img bitpool-passion" src="/public/components/cases/bitpool-passion.png" alt="Bitpool passion" />
+                  <img class="case-item-img bitpool-process" src="/public/components/cases/bitpool-process.png" alt="Bitpool process" />
+                </div>
+              </div>
+              <div class="cases-carousel-item grid-cell-10">
+                <div class="case-item-text case-item-text-mobile">
+                  <h3>Kopi-d Co</h3>
+                  <p>Быстрый, легкий и SEO-оптимизированный интернет-магазин</p>
+                </div>
+                <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cases-carousel-slide-counter">
+          <img src="/public/homepage/arrow-left.svg" alt="previous slide" id="cases-carousel-prev-slide"/>
+          <span>
+            <span id="cases-carousel-current-slide"></span>
+            <span>/</span>
+            <span id="cases-carousel-max-slide"></span>
+          </span>
+          <img src="/public/homepage/arrow-right.svg" alt="next slide" id="cases-carousel-next-slide"/>
         </div>
       </div>
     `;
@@ -315,7 +414,7 @@ class Request extends HTMLElement {
             <input class="form-field" type="text" placeholder="Телефон" />
           </div>
           <input class="form-field" type="email" placeholder="Электронная почта*" />
-          <textarea class="form-field textarea">О проекте</textarea>
+          <textarea class="form-field textarea" placeholder="О проекте"></textarea>
           <div class="tags-list">
             <div class="tag">CRM</div>
             <div class="tag tag-pressed">Мобильное приложение</div>
@@ -399,15 +498,15 @@ class Footer extends HTMLElement {
                 <a class="email-link" href="mailto:hello@exceed-team.com">hello@exceed-team.com</a>
               </div>
               <div class="social-links">
-                <a href="#" target="_blank"><img src="/public/components/footer/media_social_linkedIn_icon.svg" alt="linked in link"></a>
-                <a href="#" target="_blank"><img src="/public/components/footer/media_social_vk_icon.svg" alt="vk link"></a>
-                <a href="#" target="_blank"><img src="/public/components/footer/media_social_behance_icon.svg" alt="behance link"></a>
-                <a href="#" target="_blank"><img src="/public/components/footer/media_social_dribble_icon.svg" alt="dribble link"></a>
+                <a href="https://www.linkedin.com/in/exceed-team-63aaab145/" target="_blank"><img src="/public/components/footer/media_social_linkedIn_icon.svg" alt="linked in link"></a>
+                <a href="https://vk.com/exceed.team" target="_blank"><img src="/public/components/footer/media_social_vk_icon.svg" alt="vk link"></a>
+                <a href="https://www.behance.net/exceed-team" target="_blank"><img src="/public/components/footer/media_social_behance_icon.svg" alt="behance link"></a>
+                <a href="https://dribbble.com/ExceedTeam" target="_blank"><img src="/public/components/footer/media_social_dribble_icon.svg" alt="dribble link"></a>
               </div>
             </div>
           </div>
         </div>
-        <a href="#" class="footer-info link">Политика конфиденциальности</a>
+        <a href="https://exceed-team.com/en/privacy-policy" class="footer-info link">Политика конфиденциальности</a>
         <div class="background-circle"></div>
       </footer>
     `;
@@ -421,6 +520,7 @@ customElements.define('grey-card', InfoCard);
 customElements.define('cases-grid', CasesGrid);
 customElements.define('team-grid', TeamCard);
 customElements.define('feedback-carousel', FeedbackCarousel);
+customElements.define('cases-carousel', CasesCarousel);
 customElements.define('rewards-carousel', Rewards);
 customElements.define('request-form', Request);
 customElements.define('main-footer', Footer);
