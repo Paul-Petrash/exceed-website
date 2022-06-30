@@ -5,6 +5,10 @@ const closeMenuIcon = document.getElementById('burger-close-icon');
 const body = document.body;
 const casesSlider = document.querySelector('.cases-slider');
 const casesGrid = document.querySelector('.cases-grid');
+const process = document.getElementById('process');
+
+const processLayout = document.querySelector('.process-layout');
+const processLayoutMobile = document.querySelector('.process-layout-mobile');
 
 const carousel = document.getElementById('carousel');
 const prevSlide = document.getElementById('prev-slide');
@@ -25,6 +29,7 @@ let sliderOffsetMobile = 0;
 let mobileSliderItem = document.querySelector('.cases-carousel-item')?.clientWidth;
 const maxSlides = carousel?.childElementCount || 1;
 const maxSlidesMobile = 10;
+const isLowerThan1024 = window.innerWidth < 1024;
 
 const handleMenu = () => {
   if (!burgerMenu.style['top'] || burgerMenu.style['top'] === '-800px') {
@@ -80,21 +85,37 @@ const openNextSlideMobile = () => {
   currentSlideSpanMobile.innerHTML = `${currentSlideMobile < 10 ? '0' : ''}${currentSlideMobile}`;
 }
 
-const displayCases = () => {
+const handleResize = () => {
   if (window.innerWidth < 1024) {
     casesSlider.parentNode.parentNode.style["display"] = 'block';
     casesGrid.style["display"] = 'none';
+    process.style['margin-bottom'] = '144px';
+    processLayout.hidden = true;
+    processLayoutMobile.style["display"] = 'flex';
   } else {
     casesSlider.parentNode.parentNode.style["display"] = 'none';
     casesGrid.style["display"] = 'grid';
+    process.style['margin-bottom'] = '1000px';
+    processLayout.hidden = false;
+    processLayoutMobile.style["display"] = 'none';
   }
 }
 
-displayCases();
+handleResize();
+
+if (isLowerThan1024) {
+  process.style['margin-bottom'] = '144px';
+  processLayout.hidden = true;
+  processLayoutMobile.style["display"] = 'flex';
+} else {
+  process.style['margin-bottom'] = '1000px';
+  processLayout.hidden = false;
+  processLayoutMobile.style["display"] = 'none';
+};
 
 openMenuIcon.addEventListener('click', () => handleMenu());
 closeMenuIcon.addEventListener('click', () => handleMenu());
-window.addEventListener('resize', () => displayCases(), true);
+window.addEventListener('resize', () => handleResize(), true);
 
 if (carousel) {
   carousel.style["transform"] = `translateX(${sliderOffset}px)`;
