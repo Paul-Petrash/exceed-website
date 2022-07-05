@@ -4,7 +4,7 @@ class Header extends HTMLElement {
       <header>
         <a href="/index.html" class="logo">
           <img src="/public/small-logo.svg" alt="logo"/>
-          <p class="logo-name">Exceed Team</p>
+          <p class="logo-name">ITRUM</p>
         </a>
         <div class="navigation">
           <a class="nav-item hover-text" href="/pages/cases.html">Кейсы</a>
@@ -17,7 +17,7 @@ class Header extends HTMLElement {
             <div class="burger-header">
               <a href="/index.html" class="logo">
                 <img src="/public/small-logo.svg" alt="logo"/>
-                <p class="logo-name-menu">Exceed Team</p>
+                <p class="logo-name-menu">ITRUM</p>
               </a>
               <img id="burger-close-icon" src="/public/components/header/close.svg" alt="close icon">
             </div>
@@ -38,10 +38,10 @@ class Header extends HTMLElement {
                   <a href="https://www.behance.net/exceed-team" target="_blank"><img src="/public/components/footer/media_social_behance_icon.svg" alt="behance link"></a>
                   <a href="https://dribbble.com/ExceedTeam" target="_blank"><img src="/public/components/footer/media_social_dribble_icon.svg" alt="dribble link"></a>
                 </div>
-                <div class="languages">
+                <!-- <div class="languages">
                   <p class="language language-current">Rus</p>
                   <p class="language">Eng</p>
-                </div>
+                </div> -->
               </div>
             </div>
             <div class="burger-background"></div>
@@ -74,7 +74,36 @@ class ReviewCard extends HTMLElement {
         </div>
         <img class="quote" src="/public/homepage/quote.svg" alt="quote" />
         <p class="review-text">${review}</p>
-        <button class="go-clatch">На CLUTCH</button>
+        <!-- <button class="go-clatch">На CLUTCH</button> -->
+        <div class="card-background"></div>
+      </div>
+    `;
+  }
+}
+
+class ReviewCardMobile extends HTMLElement {
+  connectedCallback() {
+    const name = this.getAttribute('name') || "";
+    const company = this.getAttribute('company') || "no company";
+    const review = this.getAttribute('review') || "no text";
+    const avatar = this.getAttribute('avatar');
+    const date = this.getAttribute('date') || "no date";
+
+    this.innerHTML = `
+      <div class="carousel-card-mob">
+        <div class="carousel-card-header">
+          <div class="header-left">
+            <img class="carousel-card-avatar-mob" src="${avatar}" alt="feedback avatar">
+            <div class="reviewer">
+              <h3 class="reviewer-name-mob">${name}</h3>
+              <p class="reviewer-company-mob">${company}</p>
+            </div>
+          </div>
+          <p class="header-right-date">${date}</p>
+        </div>
+        <img class="quote-mob" src="/public/homepage/quote.svg" alt="quote" />
+        <p class="review-text-mob">${review}</p>
+        <!-- <button class="go-clatch">На CLUTCH</button> -->
         <div class="card-background"></div>
       </div>
     `;
@@ -355,32 +384,75 @@ class Rewards extends HTMLElement {
 class FeedbackCarousel extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <div class="feedback">
+      <div id="feedback">
         <div class="section-header">
           <h2 class="section-name name-margin">Отзывы</h2>
         </div>
+        
         <div class="carousel-wrapper">
           <div id="carousel">
             <review-card
-              name="Паша Техник"
+              name="Francois Holl"
+              company="Co-Founder & CEO at Kiskadi"
+              avatar="/public/components/reviews/francois_holl.jpeg"
+              date="17.03.2019"
+              review="Мой стартап разрабатывает облачные CRM-решения. Мы хотели выпустить новую версию маркетингового модуля в течение двух месяцев. ITRUM успешно скооперировались с нашей бразильской командой и создали ключевую часть функционала уже в первый месяц работы."
+            ></review-card>
+            <review-card
+              name="Nestor Hernandez"
+              company="Licensed Realtor at Coldwell Banker Paradise"
+              avatar="/public/components/reviews/nestor_hernandez.jpeg"
+              date="17.03.2019"
+              review="Разработчики из ITRUM смогли не только оправдать, но и превзойти наши ожидания: обеспечили успешный запуск (проект был готов на 70%, и ребята вовремя закончили все спринты по нашему расписанию), а также предоставили техническую поддержку (исправление багов и различные улучшения). Отличные навыки коммуникации, работа на профессиональном уровне, и стоимость тоже устраивает. Спасибо, что помогли нам преуспеть!"
+            ></review-card>
+            <review-card
+              name="Ricardo Matos"
+              company="Head of Tech at AlfaConvert"
+              avatar="/public/components/reviews/ricardo_matos.jpeg"
+              date="17.03.2019"
+              review="ITRUM создали лендинг и веб-приложение для нашей AdTech-компании. Хороший код и достойное тестирование перед запуском. Также они давали нам качественную обратную связь и помогали развивать продуктовые идеи."
+            ></review-card>
+            <review-card
+              name="Dominic Hacking"
+              company="Founder & Web Developer at Hax"
+              avatar="/public/components/reviews/dominic_hacking.jpeg"
+              date="17.03.2019"
+              review="Я работал с ITRUM над несколькими проектами. Вас ожидает сотрудничество с инициативным партнером, который предан своему делу, честен, трудолюбив и внимателен к деталям, что повышает эффективность бизнес-процессов клиента."
+            ></review-card>
+            <review-card
+              name="Ilyas Djeddou"
+              company="CTO at SIX Travel"
+              avatar="/public/components/reviews/ilyas_djeddou.jpeg"
+              date="17.03.2019"
+              review="ITRUM разработали приложение для бронирования отелей, продемонстрировав качественный результат в обговоренные сроки. Стоит отметить эффективность их работы и готовность откликаться на идеи клиента. Это увлеченная команда, которая легко идет на контакт."
+            ></review-card>
+            <review-card
+              name="Gavin Wedell"
+              company="Founder & CEO at Change Activation"
+              avatar="/public/components/reviews/gavin_wedell.jpeg"
+              date="17.03.2019"
+              review="ITRUM предоставили нам услуги Fullstack-разработки для создания SaaS-платформы. Они показали себя как честный и надежный партнер с отличными навыками управления проектами. Качество работы – на высшем уровне, и мы получили положительные отзывы от клиентов."
+            ></review-card>
+            <review-card
+              name="Kit Norman"
               company="Director at Mercury Digital Assets Ltd"
-              avatar="https://cdn.ruposters.ru/newslead/5/5662c6565b298da482a989ce90009640.jpg"
+              avatar="/public/components/reviews/kit_norm.webp"
               date="17.03.2019"
               review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
             ></review-card>
             <review-card
-              name="Паша Техник"
-              company="Director at Mercury Digital Assets Ltd"
-              avatar="https://cdn.ruposters.ru/newslead/5/5662c6565b298da482a989ce90009640.jpg"
+              name="Arina Yakovleva"
+              company="Account Manager at OK Pixels"
+              avatar="/public/components/reviews/arina_yakovleva.jpeg"
               date="17.03.2019"
-              review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
+              review="Наша компания специализируется на кастомной разработке, аутсорсе и аутстафе. ITRUM оказывают нам услуги фронтенд-разработки RIA/SPA и работают с проектами интернет-банкинг и маркетплейс. В обязанности ребят также входит ревью кода, техническая оценка, Agile-обсуждение с бэкенд-командой, использование Git и Jira и т.д. ITRUM получили положительные отзывы."
             ></review-card>
             <review-card
-              name="Паша Техник"
-              company="Director at Mercury Digital Assets Ltd"
-              avatar="https://cdn.ruposters.ru/newslead/5/5662c6565b298da482a989ce90009640.jpg"
+              name="EvaCodes"
+              company="Project Manager at EvaCodes"
+              avatar="/public/components/reviews/avatar_default.jpeg"
               date="17.03.2019"
-              review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
+              review="ITRUM работают над внутренним проектом для HR-отдела нашей IT-компании. Проект направлен на систематизацию процессов обработки информации. Значительная часть работы уже завершена. Нам нравится качество и темп, коммуникация, высокий уровень технической подготовки и большой опыт разработчиков, а также соблюдение сроков и требований."
             ></review-card>
           </div>
         </div>
@@ -399,6 +471,169 @@ class FeedbackCarousel extends HTMLElement {
   }
 }
 
+class FeedbackSlider extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div id="feedback-car-mobile">
+        <div class="section-header">
+          <h2 class="section-name">Отзывы</h2>
+        </div>
+
+        <div class="cases-carousel-mobile">
+          <div id="feedback-slider">
+            <div id="feedback-carousel-container">
+              <div class="cases-carousel-item">
+                <review-card-mobile
+                  name="Francois Holl"
+                  company="Co-Founder & CEO at Kiskadi"
+                  avatar="/public/components/reviews/francois_holl.jpeg"
+                  date="17.03.2019"
+                  review="Мой стартап разрабатывает облачные CRM-решения. Мы хотели выпустить новую версию маркетингового модуля в течение двух месяцев. ITRUM успешно скооперировались с нашей бразильской командой и создали ключевую часть функционала уже в первый месяц работы."
+                ></review-card-mobile>
+              </div>
+              <div class="cases-carousel-item">
+                <review-card-mobile
+                  name="Nestor Hernandez"
+                  company="Licensed Realtor at Coldwell Banker Paradise"
+                  avatar="/public/components/reviews/nestor_hernandez.jpeg"
+                  date="17.03.2019"
+                  review="Разработчики из ITRUM смогли не только оправдать, но и превзойти наши ожидания: обеспечили успешный запуск (проект был готов на 70%, и ребята вовремя закончили все спринты по нашему расписанию), а также предоставили техническую поддержку (исправление багов и различные улучшения). Отличные навыки коммуникации, работа на профессиональном уровне, и стоимость тоже устраивает. Спасибо, что помогли нам преуспеть!"
+                ></review-card-mobile>
+              </div>
+              <div class="cases-carousel-item">
+                <review-card-mobile
+                  name="Ricardo Matos"
+                  company="Head of Tech at AlfaConvert"
+                  avatar="/public/components/reviews/ricardo_matos.jpeg"
+                  date="17.03.2019"
+                  review="ITRUM создали лендинг и веб-приложение для нашей AdTech-компании. Хороший код и достойное тестирование перед запуском. Также они давали нам качественную обратную связь и помогали развивать продуктовые идеи."
+                ></review-card-mobile>
+              </div>
+              <div class="cases-carousel-item">
+                <review-card-mobile
+                  name="Dominic Hacking"
+                  company="Founder & Web Developer at Hax"
+                  avatar="/public/components/reviews/dominic_hacking.jpeg"
+                  date="17.03.2019"
+                  review="Я работал с ITRUM над несколькими проектами. Вас ожидает сотрудничество с инициативным партнером, который предан своему делу, честен, трудолюбив и внимателен к деталям, что повышает эффективность бизнес-процессов клиента."
+                ></review-card-mobile>
+              </div>
+              <div class="cases-carousel-item">
+                <review-card-mobile
+                  name="Ilyas Djeddou"
+                  company="CTO at SIX Travel"
+                  avatar="/public/components/reviews/ilyas_djeddou.jpeg"
+                  date="17.03.2019"
+                  review="ITRUM разработали приложение для бронирования отелей, продемонстрировав качественный результат в обговоренные сроки. Стоит отметить эффективность их работы и готовность откликаться на идеи клиента. Это увлеченная команда, которая легко идет на контакт."
+                ></review-card-mobile>
+              </div>
+              <div class="cases-carousel-item">
+                <review-card-mobile
+                  name="Gavin Wedell"
+                  company="Founder & CEO at Change Activation"
+                  avatar="/public/components/reviews/gavin_wedell.jpeg"
+                  date="17.03.2019"
+                  review="ITRUM предоставили нам услуги Fullstack-разработки для создания SaaS-платформы. Они показали себя как честный и надежный партнер с отличными навыками управления проектами. Качество работы – на высшем уровне, и мы получили положительные отзывы от клиентов."
+                ></review-card-mobile>
+              </div>
+              <div class="cases-carousel-item">
+                <review-card-mobile
+                  name="Kit Norman"
+                  company="Director at Mercury Digital Assets Ltd"
+                  avatar="/public/components/reviews/kit_norm.webp"
+                  date="17.03.2019"
+                  review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
+                ></review-card-mobile>
+              </div>
+              <div class="cases-carousel-item">
+                <review-card-mobile
+                  name="Arina Yakovleva"
+                  company="Account Manager at OK Pixels"
+                  avatar="/public/components/reviews/arina_yakovleva.jpeg"
+                  date="17.03.2019"
+                  review="Наша компания специализируется на кастомной разработке, аутсорсе и аутстафе. ITRUM оказывают нам услуги фронтенд-разработки RIA/SPA и работают с проектами интернет-банкинг и маркетплейс. В обязанности ребят также входит ревью кода, техническая оценка, Agile-обсуждение с бэкенд-командой, использование Git и Jira и т.д. ITRUM получили положительные отзывы."
+                ></review-card-mobile>
+              </div>
+              <div class="cases-carousel-item">
+                <review-card-mobile
+                  name="EvaCodes"
+                  company="Project Manager at EvaCodes"
+                  avatar="/public/components/reviews/avatar_default.jpeg"
+                  date="17.03.2019"
+                  review="ITRUM работают над внутренним проектом для HR-отдела нашей IT-компании. Проект направлен на систематизацию процессов обработки информации. Значительная часть работы уже завершена. Нам нравится качество и темп, коммуникация, высокий уровень технической подготовки и большой опыт разработчиков, а также соблюдение сроков и требований."
+                ></review-card-mobile>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cases-carousel-slide-counter">
+          <img src="/public/homepage/arrow-left.svg" alt="previous slide" id="cases-carousel-prev-slide-mob"/>
+          <span>
+            <span id="cases-carousel-current-slide-mob"></span>
+            <span>/</span>
+            <span id="cases-carousel-max-slide-mob"></span>
+          </span>
+          <img src="/public/homepage/arrow-right.svg" alt="next slide" id="cases-carousel-next-slide-mob"/>
+        </div>
+      </div>
+    `
+  }
+}
+
+class TeamSlider extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div id="team-slider-mobile">
+        <div class="section-header">
+          <h2 class="section-name">Команда</h2>
+        </div>
+
+        <div class="team-carousel-mobile">
+          <div id="team-slider">
+            <div id="team-carousel-container">
+              <div class="team-carousel-item">
+                <img class="team-slider-img" src="/public/homepage/team-1.png" alt="team" />
+              </div>
+              <div class="team-carousel-item">
+                <img class="team-slider-img" src="/public/homepage/team-2.png" alt="team" />
+              </div>
+              <div class="team-carousel-item">
+                <img class="team-slider-img" src="/public/homepage/team-3.png" alt="team" />
+              </div>
+              <div class="team-carousel-item">
+                <img class="team-slider-img" src="/public/homepage/team-4.png" alt="team" />
+              </div>
+              <div class="team-carousel-item">
+                <img class="team-slider-img" src="/public/homepage/team-5.png" alt="team" />
+              </div>
+              <div class="team-carousel-item">
+                <img class="team-slider-img" src="/public/homepage/team-6.png" alt="team" />
+              </div>
+              <div class="team-carousel-item">
+                <img class="team-slider-img" src="/public/homepage/team-7.png" alt="team" />
+              </div>
+              <div class="team-carousel-item">
+                <img class="team-slider-img" src="/public/homepage/team-8.png" alt="team" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-carousel-slide-counter">
+          <img src="/public/homepage/arrow-left.svg" alt="previous slide" id="team-carousel-prev-slide"/>
+          <span>
+            <span id="team-carousel-current-slide"></span>
+            <span>/</span>
+            <span id="team-carousel-max-slide"></span>
+          </span>
+          <img src="/public/homepage/arrow-right.svg" alt="next slide" id="team-carousel-next-slide"/>
+        </div>
+      </div>
+    `
+  }
+}
+
 class Request extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -410,21 +645,21 @@ class Request extends HTMLElement {
         </div>
         <div class="request-form">
           <div class="form-line">
-            <input class="form-field" type="text" placeholder="Имя*" />
-            <input class="form-field" type="text" placeholder="Телефон" />
+            <input class="form-field cfn" name="full_name" type="text" placeholder="Имя*" />
+            <input class="form-field cfp" name="phone" type="text" placeholder="Телефон" />
           </div>
-          <input class="form-field" type="email" placeholder="Электронная почта*" />
-          <textarea class="form-field textarea" placeholder="О проекте"></textarea>
+          <input class="form-field cfe" type="email" name="email" placeholder="Электронная почта*" />
+          <textarea class="form-field textarea cfm" name="about_project" placeholder="О проекте"></textarea>
           <div class="tags-list">
-            <div class="tag">CRM</div>
-            <div class="tag tag-pressed">Мобильное приложение</div>
-            <div class="tag">Сайт</div>
-            <div class="tag">Интернет-магазин</div>
-            <div class="tag">Landing-page</div>
-            <div class="tag">Редизайн</div>
-            <div class="tag">MVP</div>
-            <div class="tag">Расширение команды</div>
-            <div class="tag">Другое</div>
+            <div class="tag" id="CRM">CRM</div>
+            <div class="tag tag-pressed" id="Mobile app">Мобильное приложение</div>
+            <div class="tag" id="Website">Сайт</div>
+            <div class="tag" id="E-commerce">Интернет-магазин</div>
+            <div class="tag" id="Landing page">Landing-page</div>
+            <div class="tag" id="Redesign">Редизайн</div>
+            <div class="tag" id="MVP">MVP</div>
+            <div class="tag" id="Team extension">Расширение команды</div>
+            <div class="tag" id="Other">Другое</div>
           </div>
           <input type="file" id="img-upload" style="display:none"/>
           <label for="img-upload">
@@ -466,9 +701,9 @@ class Footer extends HTMLElement {
           <div class="footer-left">
             <div class="logo">
               <img src="/public/small-logo.svg" alt="logo"/>
-              <p class="logo-name">Exceed Team</p>
+              <p class="logo-name">ITRUM</p>
             </div>
-            <p class="footer-info">©Exceed Team 2016-2022<br/>Все права защищены</p>
+            <p class="footer-info">©ITRUM 2016-2022<br/>Все права защищены</p>
           </div>
           <div class="footer-right">
             <div class="section">
@@ -481,7 +716,7 @@ class Footer extends HTMLElement {
                 <li><a href="/pages/contacts.html">Контакты</a></li>
               </ul>
             </div>
-            <div class="section">
+            <!-- <div class="section">
               <h5 class="footer-section-name">Отрасли</h5>
               <ul class="footer-section-list">
                 <li><a href="#">Медицина</a></li>
@@ -490,7 +725,7 @@ class Footer extends HTMLElement {
                 <li><a href="#">Доставка еды</a></li>
                 <li><a href="#">Фитнес</a></li>
               </ul>
-            </div>
+            </div> -->
             <div class="section">
               <h5 class="footer-section-name">Контакты</h5>
               <div class="email">
@@ -516,10 +751,13 @@ class Footer extends HTMLElement {
 
 customElements.define('main-header', Header);
 customElements.define('review-card', ReviewCard);
+customElements.define('review-card-mobile', ReviewCardMobile);
 customElements.define('grey-card', InfoCard);
 customElements.define('cases-grid', CasesGrid);
 customElements.define('team-grid', TeamCard);
+customElements.define('team-slider', TeamSlider);
 customElements.define('feedback-carousel', FeedbackCarousel);
+customElements.define('feedback-slider', FeedbackSlider);
 customElements.define('cases-carousel', CasesCarousel);
 customElements.define('rewards-carousel', Rewards);
 customElements.define('request-form', Request);
