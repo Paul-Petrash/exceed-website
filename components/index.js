@@ -748,7 +748,7 @@ class Footer extends HTMLElement {
 
 customElements.define('main-header', Header);
 customElements.define('review-card', ReviewCard);
-customElements.define('review-card-mobile', ReviewCardMobile);
+// customElements.define('review-card-mobile', ReviewCardMobile);
 customElements.define('grey-card', InfoCard);
 customElements.define('cases-grid', CasesGrid);
 customElements.define('team-grid', TeamCard);
