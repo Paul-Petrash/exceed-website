@@ -3,8 +3,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
       <header>
         <a href="/index.html" class="logo">
-          <img src="/public/small-logo.svg" alt="logo"/>
-          <p class="logo-name">ITRUM</p>
+          <img src="/public/itrum-logo.svg" alt="logo"/>
         </a>
         <div class="navigation">
           <a class="nav-item hover-text" href="/pages/cases.html">Кейсы</a>
@@ -16,8 +15,7 @@ class Header extends HTMLElement {
           <div class="burger-menu-wrapper">
             <div class="burger-header">
               <a href="/index.html" class="logo">
-                <img src="/public/small-logo.svg" alt="logo"/>
-                <p class="logo-name-menu">ITRUM</p>
+                <img src="/public/itrum-logo.svg" alt="logo"/>
               </a>
               <img id="burger-close-icon" src="/public/components/header/close.svg" alt="close icon">
             </div>
@@ -700,8 +698,7 @@ class Footer extends HTMLElement {
         <div class="footer-content">
           <div class="footer-left">
             <div class="logo">
-              <img src="/public/small-logo.svg" alt="logo"/>
-              <p class="logo-name">ITRUM</p>
+              <img src="/public/itrum-logo.svg" alt="logo"/>
             </div>
             <p class="footer-info">©ITRUM 2016-2022<br/>Все права защищены</p>
           </div>
@@ -730,7 +727,7 @@ class Footer extends HTMLElement {
               <h5 class="footer-section-name">Контакты</h5>
               <div class="email">
                 <img src="/public/components/footer/at-email.svg" alt="email icon" />
-                <a class="email-link" href="mailto:hello@exceed-team.com">hello@exceed-team.com</a>
+                <a class="email-link" href="mailto:hello@itrum.com">hello@itrum.com</a>
               </div>
               <div class="social-links">
                 <a href="https://www.linkedin.com/in/exceed-team-63aaab145/" target="_blank"><img src="/public/components/footer/media_social_linkedIn_icon.svg" alt="linked in link"></a>
