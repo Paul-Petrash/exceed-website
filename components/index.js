@@ -27,7 +27,7 @@ class Header extends HTMLElement {
                 <a class="burger-text-link hover-text" href="/pages/team.html">Контакты</a>
               </div>
               <div class="menu-pannel">
-                <a class="burger-text-link hover-text" href="/pages/blog.html">Блог</a>
+                <!-- <a class="burger-text-link hover-text" href="/pages/blog.html">Блог</a>-->
                 <a class="burger-text-link hover-text" href="/pages/team.html">Отрасли</a>
                 <a class="burger-text-link hover-text" href="/pages/team.html">Начать работу</a>
                 <div class="social-links social-links-burger">
@@ -709,7 +709,7 @@ class Footer extends HTMLElement {
                 <li><a href="/pages/cases.html">Кейсы</a></li>
                 <li><a href="/pages/services.html">Услуги</a></li>
                 <li><a href="/pages/team.html">Команда</a></li>
-                <li><a href="/pages/blog.html">Блог</a></li>
+                <!-- <li><a href="/pages/blog.html">Блог</a></li> -->
                 <li><a href="/pages/contacts.html">Контакты</a></li>
               </ul>
             </div>
@@ -738,7 +738,7 @@ class Footer extends HTMLElement {
             </div>
           </div>
         </div>
-        <a href="https://exceed-team.com/en/privacy-policy" class="footer-info link">Политика конфиденциальности</a>
+        <!-- <a href="https://exceed-team.com/en/privacy-policy" class="footer-info link">Политика конфиденциальности</a> -->
         <div class="background-circle"></div>
       </footer>
     `;
