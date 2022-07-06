@@ -209,3 +209,60 @@ if (teamContainer) {
   teamCurrentSlideSpanMobile.innerHTML = `0${teamCurrentItem}`;
   teamMaxSlideSpanMobile.innerHTML = `${teamMaxItems < 10 ? '0' : ''}${teamMaxItems}`;
 }
+
+//handling form
+
+const nameInput = document.querySelector('.cfn');
+const phoneInput = document.querySelector('.cfp');
+const emailInput = document.querySelector('.cfe');
+const infoInput = document.querySelector('.cfm');
+const tagsList = document.querySelector('.tags-list');
+const sendFormBtn = document.getElementById('send-request');
+const selectedTags = [];
+
+if (document.querySelector('.request')) {
+  nameInput.addEventListener('change', (e) => {
+    const data = JSON.stringify(e.target.value);
+    localStorage.setItem('fullname', data);
+  });
+  phoneInput.addEventListener('change', (e) => {
+    const data = JSON.stringify(e.target.value);
+    localStorage.setItem('phone', data);
+  });
+  emailInput.addEventListener('change', (e) => {
+    const data = JSON.stringify(e.target.value);
+    localStorage.setItem('email', data);
+  });
+  infoInput.addEventListener('change', (e) => {
+    const data = JSON.stringify(e.target.value);
+    localStorage.setItem('comment', data);
+  });
+  tagsList.querySelectorAll('.tag').forEach(el => el.addEventListener('click', (e) => {
+    const node = e.target;
+  
+    node.classList.toggle('tag-pressed');
+    if (node.classList.contains('tag-pressed')) {
+      selectedTags.push(node.id);
+    } else {
+      const indx = selectedTags.indexOf(node.id);
+      selectedTags.splice(indx, 1);
+    }
+    localStorage.setItem('card-tag', JSON.stringify(selectedTags));
+  
+    // localStorage.setItem('fullname', e.target.value);
+  }))
+  // tagsList.querySelectorAll('.tag').addEventListener('click', (e) => {
+  //   const node = e.target;
+  
+  //   node.classList.toggle('tag-pressed');
+  //   if (node.classList.contains('tag-pressed')) {
+  //     selectedTags.push(node.id);
+  //   } else {
+  //     const indx = selectedTags.indexOf(node.id);
+  //     selectedTags.splice(indx, 1);
+  //   }
+  //   localStorage.setItem('card-tag', JSON.stringify(selectedTags));
+  
+  //   // localStorage.setItem('fullname', e.target.value);
+  // });
+}

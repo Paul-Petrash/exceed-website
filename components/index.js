@@ -652,7 +652,7 @@ class Request extends HTMLElement {
           <textarea class="form-field textarea cfm" name="about_project" placeholder="О проекте"></textarea>
           <div class="tags-list">
             <div class="tag" id="CRM">CRM</div>
-            <div class="tag tag-pressed" id="Mobile app">Мобильное приложение</div>
+            <div class="tag" id="Mobile app">Мобильное приложение</div>
             <div class="tag" id="Website">Сайт</div>
             <div class="tag" id="E-commerce">Интернет-магазин</div>
             <div class="tag" id="Landing page">Landing-page</div>
@@ -668,7 +668,7 @@ class Request extends HTMLElement {
               <p>Прикрепите документ</p>
             </div>
           </label>
-          <button id="send-request">Отправить</button>
+          <button id="send-request" class="cfbtn">Отправить</button>
           <p class="politics">Отправкой этого сообщения вы подтверждаете прочтение и согласие c <a href="#">Политикой конфиденциальности</a></p>
         </div>
       </div>

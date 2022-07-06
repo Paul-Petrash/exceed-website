@@ -1,62 +1,62 @@
+import {toggleClass} from './dom.js';
+
 var e = document.documentElement,
   b = document.body;
 var pf_t;
 var lp;
 var mh = 0;
-var hh// = ge('header')
-var hn// = ge('header .hn')
+var hh// = getElement('header')
+var hn// = getElement('header .hn')
 var hn_class_list = ''
 var st
 function on_init_header() {
   gc('.st', (el) => {
-    console.log('*........ ## st el scroll to');
     window.scrollTo(0, 0)
   });
   gc('.hum', () => {
-    console.log('*........ ## hum click', hCl(b, 'mob_o'));
-    tCl(b, 'mob_o', !hCl(b, 'mob_o'))
+    toggleClass(b, 'mob_o', !hCl(b, 'mob_o'))
   })
-  ge('[hrh]', (el) => {
+  getElement('[hrh]', (el) => {
     el.onclick = () => {
       window.location = attr(el, 'hrh')
     }
   })
-  ge('[hr]', (el) => {
+  getElement('[hr]', (el) => {
     el.onclick = () => {
       window.open(attr(el, 'hr'))
     }
   })
-  st = ge('.st');
-  hh = ge('header');
-  hn = ge('header .hn');
-  hn_class_list = ''
-  hn.classList.forEach(it => {
-    hn_class_list += ' ' + it;
-  });
-  ons((delta) => {
-    if (!window.prev_head) {
-      mh -= delta;
-      mh = Math.max(-max_hh, mh);
-      hh.style.marginTop = mh + 'px';
-    }
-    // if (mh === -max_hh) {
-    //   ge('.op[open]', el => {
-    //     el.removeAttribute('open')
-    //     hn.setAttribute('is_open', 0)
-    //   })
-    // }
-    ge('.op[open]', el => {
-      el.removeAttribute('open')
-      hn.setAttribute('is_open', 0)
-    })
-  }, (delta) => {
-    if (!window.prev_head) {
-      mh -= delta;
-      mh = Math.min(0, mh);
-      // mh = 0
-      hh.style.marginTop = mh + 'px'
-    }
-  }, go_rr)
+  st = getElement('.st');
+  hh = getElement('header');
+  hn = getElement('header .hn');
+  // hn_class_list = ''
+  // hn.classList.forEach(it => {
+  //   hn_class_list += ' ' + it;
+  // });
+  // ons((delta) => {
+  //   if (!window.prev_head) {
+  //     mh -= delta;
+  //     mh = Math.max(-max_hh, mh);
+  //     hh.style.marginTop = mh + 'px';
+  //   }
+  //   // if (mh === -max_hh) {
+  //   //   getElement('.op[open]', el => {
+  //   //     el.removeAttribute('open')
+  //   //     hn.setAttribute('is_open', 0)
+  //   //   })
+  //   // }
+  //   getElement('.op[open]', el => {
+  //     el.removeAttribute('open')
+  //     hn.setAttribute('is_open', 0)
+  //   })
+  // }, (delta) => {
+  //   if (!window.prev_head) {
+  //     mh -= delta;
+  //     mh = Math.min(0, mh);
+  //     // mh = 0
+  //     hh.style.marginTop = mh + 'px'
+  //   }
+  // }, go_rr)
 }
 var max_hh = 150;
 var hCl = function (elem, className) {
@@ -77,7 +77,7 @@ var attr = function (el, attr) {
   }
 }
 var ins = function (sel, div) {
-  let el = ge(sel)
+  let el = getElement(sel)
   if (typeof div === 'string') {
     let _div = crEl('div')
     _div.innerHTML = div;
@@ -91,7 +91,6 @@ var sa = function (el, attr, value) {
   }
 }
 var tCl = function (elem, className, value) {
-  console.log('looooooog 444444444')
   if (value) {
     aCl(elem, className)
   } else {
@@ -105,7 +104,7 @@ function get_top(element) {
   if (!element) {
     return {}
   }
-  element = ge(element);
+  element = getElement(element);
   if (!element || !element.getBoundingClientRect) {
     return {}
   }
@@ -143,7 +142,7 @@ var aCl = function (elem, className) {
   if (!elem) {
     return
   }
-  elem = ge(elem)
+  elem = getElement(elem)
   // if (!hCl(elem, className)) {
   //   elem.className += ' ' + className;
   // }
@@ -153,7 +152,7 @@ var rCl = function (elem, className, cb) {
   if (!elem) {
     return cb && cb()
   }
-  elem = ge(elem);
+  elem = getElement(elem);
   if (elem && elem.classList && elem.classList.contains(className)) {
     elem.classList.remove(className)
   }
@@ -162,13 +161,12 @@ var rCl = function (elem, className, cb) {
   }
 };
 var h = function (sel, value) {
-  let el = ge(sel)
+  let el = getElement(sel)
   if (el) {
     el.innerHTML = value || value == 0 ? value : ''
   }
 }
-function ge(sel, cb, mcb, parent, opts = {}) {
-  console.log('1111')
+function getElement(sel, cb, mcb, parent, opts = {}) {
   if (!sel || sel == '') {
     return
   }
@@ -206,7 +204,7 @@ function ce(tagName, attrs, parent) {
   return el;
 }
 export function gc(sel, cb, find_cb, total_cb, parent) {
-  ge(sel, function (el) {
+  getElement(sel, function (el) {
     find_cb && find_cb(el)
     el.onclick = function (e) {
       cb && cb(el, e)
@@ -217,7 +215,7 @@ function tot_h() {
   var sh = 'scrollHeight';
   return ((e[sh] || b[sh]) - e.clientHeight);
 }
-function sperc() {
+export function sperc() {
   var st = 'scrollTop',
     sh = 'scrollHeight';
   let v1 = (e[st] || b[st]);
@@ -268,7 +266,7 @@ gc('.op', (el, e) => {
     return null;
   }
   let is_open = el.getAttribute('open');
-  ge('.op[open]', el => {
+  getElement('.op[open]', el => {
     el.removeAttribute('open')
   });
   if (is_open) {

@@ -1,0 +1,80 @@
+{
+  "Rectangle 74": {
+    "anchorPoint": "MIDDLECENTER",
+    "keyframes": {
+      "width": [
+        {
+          "id": "E9PPGmONEx9v",
+          "ms": 0,
+          "property": "width",
+          "value": 62,
+          "easing": "linear",
+          "easingCurve": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "PTJ4hHfI4Pvf",
+          "ms": 3000,
+          "property": "width",
+          "value": 62,
+          "easing": "linear",
+          "easingCurve": [
+            0,
+            0,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "0rXavVl3Mp6s",
+          "ms": 3300,
+          "property": "width",
+          "value": 26,
+          "easing": "easeInOut",
+          "easingCurve": [
+            0.42,
+            0,
+            0.58,
+            1
+          ]
+        },
+        {
+          "id": "jaRycJFyPP0Q",
+          "ms": 6300,
+          "property": "width",
+          "value": 26,
+          "easing": "linear",
+          "easingCurve": [
+            0.42,
+            0,
+            0.58,
+            1
+          ]
+        },
+        {
+          "id": "ZClN6fGEz6fW",
+          "ms": 6600,
+          "property": "width",
+          "value": 62,
+          "easing": "easeInOut",
+          "easingCurve": [
+            0.42,
+            0,
+            0.58,
+            1
+          ]
+        }
+      ]
+    }
+  },
+  "Vector 134": {
+    "anchorPoint": "MIDDLECENTER",
+    "keyframes": {
+      "width": []
+    }
+  }
+}

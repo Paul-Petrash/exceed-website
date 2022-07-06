@@ -1,5 +1,8 @@
+import {sperc} from './header_footer.js';
+
 const force_domain = ''//'http://95.182.121.107:9900'
-var a = function (method, url, params, scb, ecb, isForm = false) {
+
+export var sendForm = function (method, url, params, onResolve, onReject, isForm = false) {
   params = params || {}
   var xhr = new XMLHttpRequest();
   if (method === 'GET') {
@@ -21,26 +24,28 @@ var a = function (method, url, params, scb, ecb, isForm = false) {
   }
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 0) {
-      ecb && ecb()
+      onReject && onReject()
     }
   };
   xhr.addEventListener('load', function () {
     if (xhr.readyState !== 4 || xhr.status !== 200) {
-      ecb && ecb(xhr.status, xhr.responseText)
+      alert("xhr.status=", xhr.status)
+      onReject && onReject(xhr.status, xhr.responseText)
     } else {
       try {
         var text = JSON.parse(xhr.responseText)
       } catch (e) {
         text = xhr.responseText
       }
-      scb && scb(text)
+      alert("onResolve", text)
+      onResolve && onResolve(text)
     }
   }, false);
   var str = isForm ? params : JSON.stringify(params)
   try {
     xhr.send(str);
   } catch (e) {
-    ecb && ecb(e)
+    onReject && onReject(e)
   }
 };
 var hCl = function (elem, className) {
@@ -61,7 +66,7 @@ var attr = function (el, attr) {
   }
 }
 var ins = function (sel, div) {
-  let el = ge(sel)
+  let el = getElement(sel)
   if (typeof div === 'string') {
     let _div = crEl('div')
     _div.innerHTML = div;
@@ -74,25 +79,25 @@ var sa = function (el, attr, value) {
     el.setAttribute(attr, value)
   }
 }
-var tCl = function (elem, className, value) {
+export var toggleClass = function (elem, className, value) {
   if (!elem) {
     return
   }
-  elem = ge(elem)
+  elem = getElement(elem)
   elem && elem.classList && elem.classList.toggle(className, value)
 }
 var ch = function (sel, cb) {
-  let el = ge(sel);
+  let el = getElement(sel);
   el.onchange = (e) => {
     cb && cb(e.target.value)
   }
 }
 var r = function (el) {
-  el = ge(el);
+  el = getElement(el);
   el && el.remove && el.remove()
 }
 var sv = function (sel, v) {
-  let el = ge(sel);
+  let el = getElement(sel);
   el.value = v
 }
 function get_h() {
@@ -102,7 +107,7 @@ function get_top(element) {
   if (!element) {
     return {}
   }
-  element = ge(element);
+  element = getElement(element);
   if (!element || !element.getBoundingClientRect) {
     return {}
   }
@@ -127,13 +132,13 @@ function ons(pcb, mcb, cb) {
   window.onmousemove = () => {
     if (!is_ga) {
       is_ga = 1;
-      load_ga()
+      loadGoogleAnalitics()
     }
   };
   window.onscroll = (e) => {
     if (!is_ga) {
       is_ga = 1;
-      load_ga()
+      loadGoogleAnalitics()
     }
     let {p, v1} = sperc();
     lp = lp === -1000000 ? v1 : lp;
@@ -190,7 +195,7 @@ var aCl = function (elem, className) {
   if (!elem) {
     return
   }
-  elem = ge(elem)
+  elem = getElement(elem)
   // if (!hCl(elem, className)) {
   //   elem.className += ' ' + className;
   // }
@@ -200,7 +205,7 @@ var rCl = function (elem, className, cb) {
   if (!elem) {
     return cb && cb()
   }
-  elem = ge(elem);
+  elem = getElement(elem);
   if (elem && elem.classList && elem.classList.contains(className)) {
     elem.classList.remove(className)
   }
@@ -208,18 +213,18 @@ var rCl = function (elem, className, cb) {
     setTimeout(cb)
   }
 };
-rCl8 = function (sel, className) {
-  ge(sel, (el) => {
+rCl = function (sel, className) {
+  getElement(sel, (el) => {
     rCl(el, className)
   })
 }
 var h = function (sel, value) {
-  let el = ge(sel)
+  let el = getElement(sel)
   if (el) {
     el.innerHTML = value || value == 0 ? value : ''
   }
 }
-function ge(sel, cb, mcb, parent, opts = {}) {
+export function getElement(sel, cb, mcb, parent, opts = {}) {
   if (!sel || sel == '') {
     return
   }
@@ -242,9 +247,10 @@ function ge(sel, cb, mcb, parent, opts = {}) {
     return null;
   }
 }
-var zz = ge('#z')
+var zz = getElement('#z')
 var v22 = get_top(zz).t - get_h()
-function load_ga() {
+
+function loadGoogleAnalitics() {
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function () {

@@ -36,6 +36,26 @@ header {
   margin-bottom: 120px;
 }
 
+.info-request-text {
+  max-width: 580px;
+}
+.info-h2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 49px;
+  margin: 24px 0 56px 0;
+}
+.info-h3 {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 32px;
+}
+
+.error {
+  border: 2px solid red !important;
+}
+
 .hover-text {
   display: inline-block;
   position: relative;
@@ -108,6 +128,13 @@ header {
 .blog-logo-background {
   top: 180px;
 }
+.main-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1055px;
+}
+.error-text {display: block}
 
 .logo {
   display: flex;
@@ -1028,7 +1055,7 @@ header {
   font-weight: 300;
 }
 
-#send-request, #discuss-btn {
+#send-request, #discuss-btn, #go-to-homepage {
   border: none;
   padding: 16px 24px;
   height: 52px;
@@ -1042,6 +1069,14 @@ header {
 }
 #discuss-btn {
   margin-top: 40px;
+}
+#go-to-homepage {margin-top: 48px}
+#go-to-homepage > a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
 }
 
 .politics {
@@ -1534,6 +1569,7 @@ footer {
     font-size: 49px;
     line-height: 70px;
   }
+  .error-text {display: none}
   .principles-items {flex-direction: column}
   .principle-item {width: auto}
   .nav-item {display: none}
@@ -1549,6 +1585,21 @@ footer {
   .card-name {font-size: 26px}
   .team {display: none}
   #team-slider-mobile {display: block}
+  footer {margin: 70px 15px 0 15px}
+  .footer-content {flex-direction: column}
+  .footer-left {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .footer-right {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+  }
+  .footer-info {
+    margin-top: 20px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1573,22 +1624,24 @@ footer {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
+}
 
-  footer {margin: 70px 15px 0 15px}
-  .footer-content {flex-direction: column}
-  .footer-left {
-    width: 100%;
-    margin-bottom: 40px;
-  }
-  .footer-right {
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 30px;
-  }
-  .footer-info {
-    margin-top: 20px;
-    font-size: 12px;
-  }
+#rocket-inimation {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100; */
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 @-webkit-keyframes smooth {
