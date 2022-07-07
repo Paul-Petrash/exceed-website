@@ -68,7 +68,7 @@ class ReviewCard extends HTMLElement {
               <p class="reviewer-company">${company}</p>
             </div>
           </div>
-          <p class="header-right-date">${date}</p>
+          <!-- <p class="header-right-date">${date}</p> -->
         </div>
         <img class="quote" src="/public/homepage/quote.svg" alt="quote" />
         <p class="review-text">${review}</p>
@@ -97,7 +97,7 @@ class ReviewCardMobile extends HTMLElement {
               <p class="reviewer-company-mob">${company}</p>
             </div>
           </div>
-          <p class="header-right-date">${date}</p>
+          <!-- <p class="header-right-date">${date}</p> -->
         </div>
         <img class="quote-mob" src="/public/homepage/quote.svg" alt="quote" />
         <p class="review-text-mob">${review}</p>
@@ -279,13 +279,13 @@ class CasesCarousel extends HTMLElement {
         </div>
 
         <div class="cases-carousel-slide-counter">
-          <img src="/public/homepage/arrow-left.svg" alt="previous slide" id="cases-carousel-prev-slide"/>
+          <img src="/public/homepage/arrow-left.svg" alt="previous slide" class="prev-slide"/>
           <span>
             <span id="cases-carousel-current-slide"></span>
             <span>/</span>
             <span id="cases-carousel-max-slide"></span>
           </span>
-          <img src="/public/homepage/arrow-right.svg" alt="next slide" id="cases-carousel-next-slide"/>
+          <img src="/public/homepage/arrow-right.svg" alt="next slide" class="next-slide"/>
         </div>
       </div>
     `;
@@ -456,13 +456,13 @@ class FeedbackCarousel extends HTMLElement {
         </div>
 
         <div class="slide-counter">
-          <img src="/public/homepage/arrow-left.svg" alt="previous slide" id="prev-slide"/>
+          <img src="/public/homepage/arrow-left.svg" alt="previous slide" class="prev-slide"/>
           <span>
             <span id="current-slide"></span>
             <span>/</span>
             <span id="max-slide"></span>
           </span>
-          <img src="/public/homepage/arrow-right.svg" alt="next slide" id="next-slide"/>
+          <img src="/public/homepage/arrow-right.svg" alt="next slide" class="next-slide"/>
         </div>
       </div>
     `;
@@ -566,13 +566,13 @@ class FeedbackSlider extends HTMLElement {
         </div>
 
         <div class="cases-carousel-slide-counter">
-          <img src="/public/homepage/arrow-left.svg" alt="previous slide" id="cases-carousel-prev-slide-mob"/>
+          <img src="/public/homepage/arrow-left.svg" alt="previous slide" class="prev-slide"/>
           <span>
             <span id="cases-carousel-current-slide-mob"></span>
             <span>/</span>
             <span id="cases-carousel-max-slide-mob"></span>
           </span>
-          <img src="/public/homepage/arrow-right.svg" alt="next slide" id="cases-carousel-next-slide-mob"/>
+          <img src="/public/homepage/arrow-right.svg" alt="next slide" class="next-slide"/>
         </div>
       </div>
     `
@@ -619,13 +619,13 @@ class TeamSlider extends HTMLElement {
         </div>
 
         <div class="team-carousel-slide-counter">
-          <img src="/public/homepage/arrow-left.svg" alt="previous slide" id="team-carousel-prev-slide"/>
+          <img src="/public/homepage/arrow-left.svg" alt="previous slide" class="prev-slide"/>
           <span>
             <span id="team-carousel-current-slide"></span>
             <span>/</span>
             <span id="team-carousel-max-slide"></span>
           </span>
-          <img src="/public/homepage/arrow-right.svg" alt="next slide" id="team-carousel-next-slide"/>
+          <img src="/public/homepage/arrow-right.svg" alt="next slide" class="next-slide"/>
         </div>
       </div>
     `
@@ -748,7 +748,7 @@ class Footer extends HTMLElement {
 
 customElements.define('main-header', Header);
 customElements.define('review-card', ReviewCard);
-// customElements.define('review-card-mobile', ReviewCardMobile);
+customElements.define('review-card-mobile', ReviewCardMobile);
 customElements.define('grey-card', InfoCard);
 customElements.define('cases-grid', CasesGrid);
 customElements.define('team-grid', TeamCard);
