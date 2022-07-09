@@ -213,13 +213,13 @@ if (teamContainer) {
   teamMaxSlideSpanMobile.innerHTML = `${teamMaxItems < 10 ? '0' : ''}${teamMaxItems}`;
 }
 
-document.getElementById('discuss-btn').addEventListener('click', () => {
+function ClickDiscuss(){
   const target = document.querySelector('.request-header');
   window.scrollTo({
     top: target.getBoundingClientRect().top,
     behavior: 'smooth',
   });
-})
+}
 
 //handling form
 // const nameInput = document.querySelector('.cfn');

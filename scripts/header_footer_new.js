@@ -134,7 +134,6 @@ var h = function (sel, value) {
 }
 
 function ge(sel, cb, mcb, parent, opts = {}) {
-  console.log('1111')
 
   if (!sel || sel == '') {
     return

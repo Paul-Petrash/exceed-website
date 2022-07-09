@@ -30,7 +30,7 @@ function init(){
   const messageEl = mainParent.querySelector('.cfm');
   // const ndaEl = mainParent.querySelector('.cfnda');
   const cardAutoEl = mainParent.querySelectorAll('.active-tag');
-  
+
   if(localFullName !== null){
     nameEl.value = localFullName
   }
@@ -143,7 +143,7 @@ function start_h(el, e) {
   // arrEl.forEach(val => {
   //   arrTags.push(val.id);
   // })
-  
+
   function getValue(sel) {
     return (mainParent.querySelector(sel) || {}).value;
   }
@@ -183,7 +183,7 @@ function start_h(el, e) {
     isValid = false;
   }
 
-  if(forSend.form1_tags.length === 0){
+  if(forSend.form1_tags && forSend.form1_tags.length === 0){
     if(!forSend.form1_comment.trim()){
       toggleClass(messageEl, 'error', true);
       isValid = false;
@@ -205,7 +205,7 @@ function start_h(el, e) {
     toggleClass(phoneEl, 'error-format', true);
     isValid = false;
   }
- 
+
   if(!isValid) return;
 
   let hasFile  = false;
@@ -227,14 +227,7 @@ function start_h(el, e) {
     formData.append('history_count', forSend.history_count);
     formData.append('history', forSend.history);
     formData.append('file', fileInput.files[0]);
-    setTimeout(() => {
-      console.dir('formData==', formData)
-    }, 1000);
     forSend = formData;
-  }
-  console.dir("FINAL DATA=")
-  for (let key of forSend.entries()) {
-    console.log(key[0] + ', ' + key[1]);
   }
 
   sendForm('POST', 'https://exceed-team.com/epapi/apply', forSend , (e) => {

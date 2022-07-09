@@ -29,7 +29,6 @@ export var sendForm = function (method, url, params, onResolve, onReject, isForm
   };
   xhr.addEventListener('load', function () {
     if (xhr.readyState !== 4 || xhr.status !== 200) {
-      alert("xhr.status=", xhr.status)
       onReject && onReject(xhr.status, xhr.responseText)
     } else {
       try {
@@ -37,7 +36,6 @@ export var sendForm = function (method, url, params, onResolve, onReject, isForm
       } catch (e) {
         text = xhr.responseText
       }
-      alert("onResolve", text)
       onResolve && onResolve(text)
     }
   }, false);

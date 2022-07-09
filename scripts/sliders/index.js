@@ -1,8 +1,7 @@
 function noop(){};
 
 
-window.addEventListener('DOMContentLoaded', (event) => {
-  console.log('LOOOG', 'init');
+window.addEventListener('DOMContentLoaded', (event) => {;
   _init_siema('feedback-slider #feedback-carousel-container',
    'feedback-slider .cases-carousel-slide-counter',
     '.cases-carousel-slide-counter span #cases-carousel-current-slide-mob',{
@@ -10,15 +9,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
     forceSlidePos: true,
     prevNext: true,
   });
-  _init_siema('cases-carousel #cases-carousel-container', 
+  _init_siema('cases-carousel #cases-carousel-container',
   'cases-carousel .cases-carousel-slide-counter',
   '.cases-carousel-slide-counter span #cases-carousel-current-slide',{
     gap: 15,
     forceSlidePos: true,
     prevNext: true,
   });
-  _init_siema('team-slider #team-carousel-container', 
-  'team-slider .team-carousel-slide-counter', 
+  _init_siema('team-slider #team-carousel-container',
+  'team-slider .team-carousel-slide-counter',
   '.team-carousel-slide-counter span #team-carousel-current-slide',{
     gap: 15,
     forceSlidePos: true,
