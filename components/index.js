@@ -205,42 +205,66 @@ class CasesCarousel extends HTMLElement {
                   <h3>Save Health</h3>
                   <p>CRM-системы для частной клиники</p>
                 </div>
-                <img class="case-item-img save-health" src="/public/components/cases/save-health.svg" alt="save health" />
+                <picture>
+                  <source class="case-item-img save-health" media="(max-width: 1024px)" srcset="/public/components/cases/save-health-mob.png">
+                  <source class="case-item-img save-health" media="(min-width: 1025px)" srcset="/public/components/cases/save-health.svg">
+                  <img class="case-item-img save-health" src="/public/components/cases/save-health.svg" alt="save health" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-2">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>Ukie</h3>
                   <p>Сайт для британской геймдев-индустрии</p>
                 </div>
-                <img class="case-item-img ukie" src="/public/components/cases/ukie.svg" alt="save health" />
+                <picture>
+                  <source class="case-item-img ukie" media="(max-width: 1024px)" srcset="/public/components/cases/ukie-mob.png">
+                  <source class="case-item-img ukie" media="(min-width: 1025px)" srcset="/public/components/cases/ukie.svg">
+                  <img class="case-item-img ukie" src="/public/components/cases/ukie.svg" alt="ukie" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-3">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>Real Estate</h3>
                   <p>CRM-система для риэлторского агентства</p>
                 </div>
-                <img class="case-item-img real-estate" src="/public/components/cases/real-estate.svg" alt="Real Estate" />
+                <picture>
+                  <source class="case-item-img real-estate" media="(max-width: 1024px)" srcset="/public/components/cases/real-estate-mob.png>
+                  <source class="case-item-img real-estate" media="(min-width: 1025px)" srcset="/public/components/cases/real-estate.svg">
+                  <img class="case-item-img real-estate" src="/public/components/cases/real-estate-desktop.png" alt="Real Estate" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-4">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>FinPro</h3>
                   <p>CRM-система для финтех стартапа, со встроенной функцией звонков</p>
                 </div>
-                <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
+                <picture>
+                  <source class="case-item-img fin-pro" media="(max-width: 1024px)" srcset="/public/components/cases/finpro-mob.png">
+                  <source class="case-item-img fin-pro" media="(min-width: 1025px)" srcset="/public/components/cases/finPro.svg">
+                  <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-5">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>What Song</h3>
                   <p>Онлайн-сервис, для поиска популярные треков из любимых фильмов или сериалов</p>
                 </div>
-                <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
+                <picture>
+                  <source class="case-item-img what-song" media="(max-width: 1024px)" srcset="/public/components/cases/what-song-mob.png">
+                  <source class="case-item-img what-song" media="(min-width: 1025px)" srcset="/public/components/cases/what-song.svg">
+                  <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-6">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>Continental Clothing Co</h3>
                   <p>Веб-платформа для продажи одежды с готовыми к печати принтами</p>
                 </div>
-                <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
+                <picture>
+                  <source class="case-item-img clothing" media="(max-width: 1024px)" srcset="/public/components/cases/clothing-mob.png">
+                  <source class="case-item-img clothing" media="(min-width: 1025px)" srcset="/public/components/cases/clothing.svg">
+                  <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-7">
                 <div class="case-item-text case-item-text-mobile">
@@ -255,7 +279,11 @@ class CasesCarousel extends HTMLElement {
                   <h3>GaiaHerbs</h3>
                   <p>Интернет-магазин здорового питания</p>
                 </div>
-                <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
+                <picture>
+                  <source class="case-item-img gaia-herbs" media="(max-width: 1024px)" srcset="/public/components/cases/gaiaHerbs-mob.png">
+                  <source class="case-item-img gaia-herbs" media="(min-width: 1025px)" srcset="/public/components/cases/gaiaHerbs.png">
+                  <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-9">
                 <div class="case-item-text case-item-text-mobile">
@@ -272,7 +300,11 @@ class CasesCarousel extends HTMLElement {
                   <h3>Kopi-d Co</h3>
                   <p>Быстрый, легкий и SEO-оптимизированный интернет-магазин</p>
                 </div>
-                <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+                <picture>
+                  <source class="case-item-img gaia-herbs" media="(max-width: 1024px)" srcset="/public/components/cases/gaiaHerbs-mob.png">
+                  <source class="case-item-img gaia-herbs" media="(min-width: 1025px)" srcset="/public/components/cases/gaiaHerbs.png">
+                  <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+                </picture>
               </div>
             </div>
           </div>
@@ -328,13 +360,13 @@ class TeamCard extends HTMLElement {
             <img class="team-card-img" src="/public/homepage/team-1.png" alt="team pic" />
           </div>
           <div class="team-card team-card-2">
-            <img class="team-card-img" src="/public/homepage/team-2.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-2.jpeg" alt="team pic" />
           </div>
           <div class="team-card team-card-3">
-            <img class="team-card-img" src="/public/homepage/team-3.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-3.jpeg" alt="team pic" />
           </div>
           <div class="team-card team-card-4">
-            <img class="team-card-img" src="/public/homepage/team-4.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-4.jpeg" alt="team pic" />
           </div>
           <div class="team-card team-card-5">
             <img class="team-card-img" src="/public/homepage/team-5.png" alt="team pic" />
@@ -343,10 +375,10 @@ class TeamCard extends HTMLElement {
             <img class="team-card-img" src="/public/homepage/team-6.png" alt="team pic" />
           </div>
           <div class="team-card team-card-7">
-            <img class="team-card-img" src="/public/homepage/team-7.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-7.jpeg" alt="team pic" />
           </div>
           <div class="team-card team-card-8">
-            <img class="team-card-img" src="/public/homepage/team-8.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-8.jpeg" alt="team pic" />
           </div>
         </div>
       </div>
@@ -434,7 +466,7 @@ class FeedbackCarousel extends HTMLElement {
             <review-card
               name="Kit Norman"
               company="Director at Mercury Digital Assets Ltd"
-              avatar="/public/components/reviews/kit_norm.webp"
+              avatar="/public/components/reviews/kit_norm.png"
               date="17.03.2019"
               review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
             ></review-card>
@@ -591,28 +623,50 @@ class TeamSlider extends HTMLElement {
           <div id="team-slider">
             <div id="team-carousel-container">
               <div class="team-carousel-item">
+              <picture>
+                <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-1-mob.png">
+                <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-1.png">
                 <img class="team-slider-img" src="/public/homepage/team-1.png" alt="team" />
+              </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-2.png" alt="team" />
+              <picture>
+                <img class="team-slider-img" src="/public/homepage/team-2.jpeg" alt="team" />
+              </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-3.png" alt="team" />
+                <picture>
+                  <img class="team-slider-img" src="/public/homepage/team-3.jpeg" alt="team" />
+                </picture>
+                </div>
+              <div class="team-carousel-item">
+                <picture>
+                  <img class="team-slider-img" src="/public/homepage/team-4.jpeg" alt="team" />
+                </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-4.png" alt="team" />
+                <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-5-mob.png">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-5.png">
+                  <img class="team-slider-img" src="/public/homepage/team-5.png" alt="team" />
+                </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-5.png" alt="team" />
+                <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-6-mob.png">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-6.png">
+                  <img class="team-slider-img" src="/public/homepage/team-6.png" alt="team" />
+                </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-6.png" alt="team" />
+                <picture>
+                  <img class="team-slider-img" src="/public/homepage/team-7.jpeg" alt="team" />
+                </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-7.png" alt="team" />
-              </div>
-              <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-8.png" alt="team" />
+                <picture>
+                  <img class="team-slider-img" src="/public/homepage/team-8.jpeg" alt="team" />
+                </picture>
               </div>
             </div>
           </div>
