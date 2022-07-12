@@ -138,21 +138,33 @@ class CasesGrid extends HTMLElement {
             <h3>FinPro</h3>
             <p>CRM-система для финтех стартапа, со встроенной функцией звонков</p>
           </div>
-          <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
+          <picture>
+            <source class="case-item-img fin-pro" media="(max-width: 1024px)" srcset="/public/components/cases/finpro-mob.png">
+            <source class="case-item-img fin-pro" media="(min-width: 1025px)" srcset="/public/components/cases/finPro.svg">
+            <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
+          </picture>
         </div>
         <div class="case-item grid-cell-5 hover-zone-5">
           <div class="case-item-text">
             <h3>What Song</h3>
             <p>Онлайн-сервис, для поиска популярные треков из любимых фильмов или сериалов</p>
           </div>
-          <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
+          <picture>
+            <source class="case-item-img what-song" media="(max-width: 1024px)" srcset="/public/components/cases/what-song-mob.png">
+            <source class="case-item-img what-song" media="(min-width: 1025px)" srcset="/public/components/cases/what-song.svg">
+            <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
+          </picture>
         </div>
         <div class="case-item grid-cell-6 hover-zone-6">
           <div class="case-item-text">
             <h3>Continental Clothing Co</h3>
             <p>Веб-платформа для продажи одежды с готовыми к печати принтами</p>
           </div>
-          <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
+          <picture>
+            <source class="case-item-img clothing" media="(max-width: 1024px)" srcset="/public/components/cases/clothing-mob.png">
+            <source class="case-item-img clothing" media="(min-width: 1025px)" srcset="/public/components/cases/clothing.svg">
+            <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
+          </picture>
         </div>
         <div class="case-item grid-cell-7 hover-zone-7">
           <div class="case-item-text">
@@ -167,7 +179,11 @@ class CasesGrid extends HTMLElement {
             <h3>GaiaHerbs</h3>
             <p>Интернет-магазин здорового питания</p>
           </div>
-          <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
+          <picture>
+            <source class="case-item-img gaia-herbs" media="(max-width: 1024px)" srcset="/public/components/cases/gaiaHerbs-mob.png">
+            <source class="case-item-img gaia-herbs" media="(min-width: 1025px)" srcset="/public/components/cases/gaiaHerbs.png">
+            <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
+          </picture>
         </div>
         <div class="case-item grid-cell-9 hover-zone-9">
           <div class="case-item-text">
@@ -186,7 +202,11 @@ class CasesGrid extends HTMLElement {
             <h3>Kopi-d Co</h3>
             <p>Быстрый, легкий и SEO-оптимизированный интернет-магазин</p>
           </div>
-          <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+          <picture>
+            <source class="case-item-img gaia-herbs" media="(max-width: 1024px)" srcset="/public/components/cases/kopi-d-mob.png">
+            <source class="case-item-img gaia-herbs" media="(min-width: 1025px)" srcset="/public/components/cases/kopi-d.png">
+            <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+          </picture>
         </div>
       </div>
     `;
@@ -301,8 +321,8 @@ class CasesCarousel extends HTMLElement {
                   <p>Быстрый, легкий и SEO-оптимизированный интернет-магазин</p>
                 </div>
                 <picture>
-                  <source class="case-item-img gaia-herbs" media="(max-width: 1024px)" srcset="/public/components/cases/gaiaHerbs-mob.png">
-                  <source class="case-item-img gaia-herbs" media="(min-width: 1025px)" srcset="/public/components/cases/gaiaHerbs.png">
+                  <source class="case-item-img gaia-herbs" media="(max-width: 1024px)" srcset="/public/components/cases/kopi-d-mob.png">
+                  <source class="case-item-img gaia-herbs" media="(min-width: 1025px)" srcset="/public/components/cases/kopi-d.png">
                   <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
                 </picture>
               </div>
