@@ -328,13 +328,13 @@ class TeamCard extends HTMLElement {
             <img class="team-card-img" src="/public/homepage/team-1.png" alt="team pic" />
           </div>
           <div class="team-card team-card-2">
-            <img class="team-card-img" src="/public/homepage/team-2.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-2.jpeg" alt="team pic" />
           </div>
           <div class="team-card team-card-3">
-            <img class="team-card-img" src="/public/homepage/team-3.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-3.jpeg" alt="team pic" />
           </div>
           <div class="team-card team-card-4">
-            <img class="team-card-img" src="/public/homepage/team-4.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-4.jpeg" alt="team pic" />
           </div>
           <div class="team-card team-card-5">
             <img class="team-card-img" src="/public/homepage/team-5.png" alt="team pic" />
@@ -343,10 +343,10 @@ class TeamCard extends HTMLElement {
             <img class="team-card-img" src="/public/homepage/team-6.png" alt="team pic" />
           </div>
           <div class="team-card team-card-7">
-            <img class="team-card-img" src="/public/homepage/team-7.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-7.jpeg" alt="team pic" />
           </div>
           <div class="team-card team-card-8">
-            <img class="team-card-img" src="/public/homepage/team-8.png" alt="team pic" />
+            <img class="team-card-img" src="/public/homepage/team-8.jpeg" alt="team pic" />
           </div>
         </div>
       </div>
@@ -594,13 +594,13 @@ class TeamSlider extends HTMLElement {
                 <img class="team-slider-img" src="/public/homepage/team-1.png" alt="team" />
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-2.png" alt="team" />
+                <img class="team-slider-img" src="/public/homepage/team-2.jpeg" alt="team" />
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-3.png" alt="team" />
+                <img class="team-slider-img" src="/public/homepage/team-3.jpeg" alt="team" />
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-4.png" alt="team" />
+                <img class="team-slider-img" src="/public/homepage/team-4.jpeg" alt="team" />
               </div>
               <div class="team-carousel-item">
                 <img class="team-slider-img" src="/public/homepage/team-5.png" alt="team" />
@@ -609,10 +609,10 @@ class TeamSlider extends HTMLElement {
                 <img class="team-slider-img" src="/public/homepage/team-6.png" alt="team" />
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-7.png" alt="team" />
+                <img class="team-slider-img" src="/public/homepage/team-7.jpeg" alt="team" />
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-8.png" alt="team" />
+                <img class="team-slider-img" src="/public/homepage/team-8.jpeg" alt="team" />
               </div>
             </div>
           </div>
