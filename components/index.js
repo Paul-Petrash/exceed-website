@@ -228,7 +228,7 @@ class CasesCarousel extends HTMLElement {
                   <p>CRM-система для риэлторского агентства</p>
                 </div>
                 <picture>
-                  <source class="case-item-img real-estate" media="(max-width: 1024px)" srcset="/public/components/cases/real-estate-mob.png>
+                  <source class="case-item-img real-estate" media="(max-width: 1024px)" srcset="/public/components/cases/real-estate-mob.png">
                   <source class="case-item-img real-estate" media="(min-width: 1025px)" srcset="/public/components/cases/real-estate.svg">
                   <img class="case-item-img real-estate" src="/public/components/cases/real-estate-desktop.png" alt="Real Estate" />
                 </picture>
@@ -357,28 +357,59 @@ class TeamCard extends HTMLElement {
         </div>
         <div class="team-grid">
           <div class="team-card team-card-1">
-            <img class="team-card-img" src="/public/homepage/team-1.png" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-1-mob.png">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-1.png">
+              <img class="team-card-img" src="/public/homepage/team-1.png" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-2">
-            <img class="team-card-img" src="/public/homepage/team-2.jpeg" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-2-mob.jpeg">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-2.jpeg">
+              <img class="team-card-img" src="/public/homepage/team-2.jpeg" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-3">
-            <img class="team-card-img" src="/public/homepage/team-3.jpeg" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-3-mob.jpeg">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-3.jpeg">
+              <img class="team-card-img" src="/public/homepage/team-3.jpeg" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-4">
-            <img class="team-card-img" src="/public/homepage/team-4.jpeg" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-4.jpeg">
+              <img class="team-card-img" src="/public/homepage/team-4.jpeg" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-5">
-            <img class="team-card-img" src="/public/homepage/team-5.png" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-5-mob.png">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-5.png">
+              <img class="team-card-img" src="/public/homepage/team-5.png" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-6">
-            <img class="team-card-img" src="/public/homepage/team-6.png" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-6-mob.png">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-6.png">
+              <img class="team-card-img" src="/public/homepage/team-6.png" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-7">
-            <img class="team-card-img" src="/public/homepage/team-7.jpeg" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-7-mob.jpeg">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-7.jpeg">
+              <img class="team-card-img" src="/public/homepage/team-7.jpeg" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-8">
-            <img class="team-card-img" src="/public/homepage/team-8.jpeg" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-8-mob.jpeg">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-8.jpeg">
+              <img class="team-card-img" src="/public/homepage/team-8.jpeg" alt="team pic" />
+            </picture>
           </div>
         </div>
       </div>
@@ -631,11 +662,15 @@ class TeamSlider extends HTMLElement {
               </div>
               <div class="team-carousel-item">
               <picture>
+                <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-2-mob.jpeg">
+                <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-2.jpeg">
                 <img class="team-slider-img" src="/public/homepage/team-2.jpeg" alt="team" />
               </picture>
               </div>
               <div class="team-carousel-item">
                 <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-3-mob.jpeg">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-3.jpeg">
                   <img class="team-slider-img" src="/public/homepage/team-3.jpeg" alt="team" />
                 </picture>
                 </div>
@@ -660,11 +695,15 @@ class TeamSlider extends HTMLElement {
               </div>
               <div class="team-carousel-item">
                 <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-7-mob.jpeg">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-7.jpeg">
                   <img class="team-slider-img" src="/public/homepage/team-7.jpeg" alt="team" />
                 </picture>
               </div>
               <div class="team-carousel-item">
                 <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-8-mob.jpeg">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-8.jpeg">
                   <img class="team-slider-img" src="/public/homepage/team-8.jpeg" alt="team" />
                 </picture>
               </div>

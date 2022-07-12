@@ -64,89 +64,6 @@ const handleMenu = () => {
   }
 }
 
-// const openPrevSlide = () => {
-//   if (currentSlide > 1) {
-//     currentSlide -= 1;
-//     sliderOffset += 955;
-//   };
-
-//   currentSlideSpan.innerHTML = `0${currentSlide}`;
-//   carousel.style["transform"] = `translateX(${sliderOffset}px)`;
-// }
-
-// const openNextSlide = () => {
-//   if (currentSlide < maxSlides) {
-//     currentSlide += 1;
-//     sliderOffset -= 955;
-//   };
-
-//   carousel.style["transform"] = `translateX(${sliderOffset}px)`;
-//   currentSlideSpan.innerHTML = `0${currentSlide}`;
-// }
-
-// const openPrevSlideMobile = () => {
-//   if (currentSlideMobile > 1) {
-//     currentSlideMobile -= 1;
-//     sliderOffsetMobile += mobileSliderItem + 40;
-//   };
-
-//   currentSlideSpanMobile.innerHTML = `0${currentSlideMobile}`;
-//   carouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-// }
-
-// const openNextSlideMobile = () => {
-//   if (currentSlideMobile < maxSlidesMobile) {
-//     currentSlideMobile += 1;
-//     sliderOffsetMobile -= mobileSliderItem + 40
-//   };
-
-//   carouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-//   currentSlideSpanMobile.innerHTML = `${currentSlideMobile < 10 ? '0' : ''}${currentSlideMobile}`;
-// }
-
-// const openPrevSlideFeedbackMob = () => {
-//   if (feedbackCurrentItem > 1) {
-//     feedbackCurrentItem -= 1;
-//     sliderOffsetMobile += mobileSliderItem + 40;
-//   };
-
-//   feedbackCurrentSlideMobile.innerHTML = `0${feedbackCurrentItem}`;
-
-//   let cur = feedbackCarouselMobile.style["margin-left"];
-// console.log('LOOOG', cur);
-//   feedbackCarouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-// }
-
-// const openNextSlideFeedbackMob = () => {
-//   if (feedbackCurrentItem < feedbackMaxItems) {
-//     feedbackCurrentItem += 1;
-//     sliderOffsetMobile -= mobileSliderItem + 40
-//   };
-
-//   feedbackCarouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-//   feedbackCurrentSlideMobile.innerHTML = `${feedbackCurrentItem < 10 ? '0' : ''}${feedbackCurrentItem}`;
-// }
-
-// const casesPrevSlideMobile = () => {
-//   if (teamCurrentItem > 1) {
-//     teamCurrentItem -= 1;
-//     sliderOffsetMobile += mobileSliderItem + 40;
-//   };
-
-//   teamCurrentSlideSpanMobile.innerHTML = `0${teamCurrentItem}`;
-//   teamCarouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-// }
-
-// const casesNextSlideMobile = () => {
-//   if (teamCurrentItem < teamMaxItems) {
-//     teamCurrentItem += 1;
-//     sliderOffsetMobile -= mobileSliderItem + 40;
-//   };
-
-//   teamCarouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-//   teamCurrentSlideSpanMobile.innerHTML = `${teamCurrentItem < 10 ? '0' : ''}${teamCurrentItem}`;
-// }
-
 const handleResize = () => {
   if (window.innerWidth < 1024) {
     casesSlider && (casesSlider.parentNode.parentNode.style["display"] = 'block');
@@ -191,24 +108,16 @@ if (carousel) {
   carousel.style["transform"] = `translateX(${sliderOffset}px)`;
   currentSlideSpan.innerHTML = `0${currentSlide}`;
   maxSlideSpan.innerHTML = `0${maxSlides}`;
-  // prevSlide.addEventListener('click', () => openPrevSlide());
-  // nextSlide.addEventListener('click', () => openNextSlide());
 }
 if (feedbackCarouselContainer) {
   feedbackCurrentSlideMobile.innerHTML = `0${feedbackCurrentItem}`;
   feedbackMaxSlideMobile.innerHTML = `0${feedbackMaxItems}`;
-  // feedbackPrevSlideMobile.addEventListener('click', () => openPrevSlideFeedbackMob());
-  // feedbackNextSlideMobile.addEventListener('click', () => openNextSlideFeedbackMob());
 }
 if (carouselMobile) {
-  // prevSlideMobile.addEventListener('click', () => openPrevSlideMobile());
-  // nextSlideMobile.addEventListener('click', () => openNextSlideMobile());
   currentSlideSpanMobile.innerHTML = `0${currentSlideMobile}`;
   maxSlideSpanMobile.innerHTML = `${maxSlidesMobile < 10 ? '0' : ''}${maxSlidesMobile}`;
 }
 if (teamContainer) {
-  // teamPrevSlideMobile.addEventListener('click', () => casesPrevSlideMobile());
-  // teamNextSlideMobile.addEventListener('click', () => casesNextSlideMobile());
   teamCurrentSlideSpanMobile.innerHTML = `0${teamCurrentItem}`;
   teamMaxSlideSpanMobile.innerHTML = `${teamMaxItems < 10 ? '0' : ''}${teamMaxItems}`;
 }
