@@ -117,14 +117,14 @@ class CasesGrid extends HTMLElement {
             <h3>Save Health</h3>
             <p>CRM-системы для частной клиники</p>
           </div>
-          <img class="case-item-img save-health" src="/public/components/cases/save-health.svg" alt="save health" />
+          <img class="case-item-img save-health" src="/public/components/cases/save-health.png" alt="save health" />
         </div>
         <div class="case-item grid-cell-2 hover-zone-2">
           <div class="case-item-text">
             <h3>Ukie</h3>
             <p>Сайт для британской геймдев-индустрии</p>
           </div>
-          <img class="case-item-img ukie" src="/public/components/cases/ukie.svg" alt="save health" />
+          <img class="case-item-img ukie" src="/public/components/cases/ukie.png" alt="save health" />
         </div>
         <div class="case-item grid-cell-3 hover-zone-3">
           <div class="case-item-text">
@@ -140,8 +140,8 @@ class CasesGrid extends HTMLElement {
           </div>
           <picture>
             <source class="case-item-img fin-pro" media="(max-width: 1024px)" srcset="/public/components/cases/finpro-mob.png">
-            <source class="case-item-img fin-pro" media="(min-width: 1025px)" srcset="/public/components/cases/finPro.svg">
-            <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
+            <source class="case-item-img fin-pro" media="(min-width: 1025px)" srcset="/public/components/cases/finPro.png">
+            <img class="case-item-img fin-pro" src="/public/components/cases/finPro.png" alt="FinPro" />
           </picture>
         </div>
         <div class="case-item grid-cell-5 hover-zone-5">
@@ -151,8 +151,8 @@ class CasesGrid extends HTMLElement {
           </div>
           <picture>
             <source class="case-item-img what-song" media="(max-width: 1024px)" srcset="/public/components/cases/what-song-mob.png">
-            <source class="case-item-img what-song" media="(min-width: 1025px)" srcset="/public/components/cases/what-song.svg">
-            <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
+            <source class="case-item-img what-song" media="(min-width: 1025px)" srcset="/public/components/cases/what-song.png">
+            <img class="case-item-img what-song" src="/public/components/cases/what-song.png" alt="What Song" />
           </picture>
         </div>
         <div class="case-item grid-cell-6 hover-zone-6">
@@ -162,8 +162,8 @@ class CasesGrid extends HTMLElement {
           </div>
           <picture>
             <source class="case-item-img clothing" media="(max-width: 1024px)" srcset="/public/components/cases/clothing-mob.png">
-            <source class="case-item-img clothing" media="(min-width: 1025px)" srcset="/public/components/cases/clothing.svg">
-            <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
+            <source class="case-item-img clothing" media="(min-width: 1025px)" srcset="/public/components/cases/clothing.png">
+            <img class="case-item-img clothing" src="/public/components/cases/clothing.png" alt="clothing" />
           </picture>
         </div>
         <div class="case-item grid-cell-7 hover-zone-7">
@@ -227,8 +227,8 @@ class CasesCarousel extends HTMLElement {
                 </div>
                 <picture>
                   <source class="case-item-img save-health" media="(max-width: 1024px)" srcset="/public/components/cases/save-health-mob.png">
-                  <source class="case-item-img save-health" media="(min-width: 1025px)" srcset="/public/components/cases/save-health.svg">
-                  <img class="case-item-img save-health" src="/public/components/cases/save-health.svg" alt="save health" />
+                  <source class="case-item-img save-health" media="(min-width: 1025px)" srcset="/public/components/cases/save-health.png">
+                  <img class="case-item-img save-health" src="/public/components/cases/save-health.png" alt="save health" />
                 </picture>
               </div>
               <div class="cases-carousel-item grid-cell-2">
@@ -238,8 +238,8 @@ class CasesCarousel extends HTMLElement {
                 </div>
                 <picture>
                   <source class="case-item-img ukie" media="(max-width: 1024px)" srcset="/public/components/cases/ukie-mob.png">
-                  <source class="case-item-img ukie" media="(min-width: 1025px)" srcset="/public/components/cases/ukie.svg">
-                  <img class="case-item-img ukie" src="/public/components/cases/ukie.svg" alt="ukie" />
+                  <source class="case-item-img ukie" media="(min-width: 1025px)" srcset="/public/components/cases/ukie.png">
+                  <img class="case-item-img ukie" src="/public/components/cases/ukie.png" alt="ukie" />
                 </picture>
               </div>
               <div class="cases-carousel-item grid-cell-3">
@@ -260,8 +260,8 @@ class CasesCarousel extends HTMLElement {
                 </div>
                 <picture>
                   <source class="case-item-img fin-pro" media="(max-width: 1024px)" srcset="/public/components/cases/finpro-mob.png">
-                  <source class="case-item-img fin-pro" media="(min-width: 1025px)" srcset="/public/components/cases/finPro.svg">
-                  <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
+                  <source class="case-item-img fin-pro" media="(min-width: 1025px)" srcset="/public/components/cases/finPro.png">
+                  <img class="case-item-img fin-pro" src="/public/components/cases/finPro.png" alt="FinPro" />
                 </picture>
               </div>
               <div class="cases-carousel-item grid-cell-5">
@@ -271,8 +271,8 @@ class CasesCarousel extends HTMLElement {
                 </div>
                 <picture>
                   <source class="case-item-img what-song" media="(max-width: 1024px)" srcset="/public/components/cases/what-song-mob.png">
-                  <source class="case-item-img what-song" media="(min-width: 1025px)" srcset="/public/components/cases/what-song.svg">
-                  <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
+                  <source class="case-item-img what-song" media="(min-width: 1025px)" srcset="/public/components/cases/what-song.png">
+                  <img class="case-item-img what-song" src="/public/components/cases/what-song.png" alt="What Song" />
                 </picture>
               </div>
               <div class="cases-carousel-item grid-cell-6">
@@ -282,8 +282,8 @@ class CasesCarousel extends HTMLElement {
                 </div>
                 <picture>
                   <source class="case-item-img clothing" media="(max-width: 1024px)" srcset="/public/components/cases/clothing-mob.png">
-                  <source class="case-item-img clothing" media="(min-width: 1025px)" srcset="/public/components/cases/clothing.svg">
-                  <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
+                  <source class="case-item-img clothing" media="(min-width: 1025px)" srcset="/public/components/cases/clothing.png">
+                  <img class="case-item-img clothing" src="/public/components/cases/clothing.png" alt="clothing" />
                 </picture>
               </div>
               <div class="cases-carousel-item grid-cell-7">
