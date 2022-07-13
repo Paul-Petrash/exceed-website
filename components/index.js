@@ -291,8 +291,16 @@ class CasesCarousel extends HTMLElement {
                   <h3>Palmetto Park</h3>
                   <p>Платформа для размещения объявлений о продаже недвижимости</p>
                 </div>
-                <img class="case-item-img palmetto-back" src="/public/components/cases/palmetto-back.png" alt="palmetto back" />
-                <img class="case-item-img palmetto-front" src="/public/components/cases/palmetto-front.png" alt="palmetto front" />
+                <picture>
+                  <source class="case-item-img palmetto-back" media="(max-width: 1024px)" srcset="/public/components/cases/palmetto-back-mob.png">
+                  <source class="case-item-img palmetto-back" media="(min-width: 1025px)" srcset="/public/components/cases/palmetto-back.png">
+                  <img class="case-item-img palmetto-back" src="/public/components/cases/palmetto-back.png" alt="palmetto back" />
+                </picture>
+                <picture>
+                  <source class="case-item-img palmetto-front" media="(max-width: 1024px)" srcset="/public/components/cases/palmetto-front-mob.png">
+                  <source class="case-item-img palmetto-front" media="(min-width: 1025px)" srcset="/public/components/cases/palmetto-front.png">
+                  <img class="case-item-img palmetto-front" src="/public/components/cases/palmetto-front.png" alt="palmetto front" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-8">
                 <div class="case-item-text case-item-text-mobile">
@@ -311,8 +319,16 @@ class CasesCarousel extends HTMLElement {
                   <p>Технологическая экосистема, которая позволяет контролировать ресурсы и эффективность</p>
                 </div>
                 <div class="rotate">
+                <picture>
+                  <source class="case-item-img bitpool-passion" media="(max-width: 1024px)" srcset="/public/components/cases/bitpool-passion-mob.png">
+                  <source class="case-item-img bitpool-passion" media="(min-width: 1025px)" srcset="/public/components/cases/bitpool-passion.png">
                   <img class="case-item-img bitpool-passion" src="/public/components/cases/bitpool-passion.png" alt="Bitpool passion" />
+                </picture>
+                <picture>
+                  <source class="case-item-img bitpool-process" media="(max-width: 1024px)" srcset="/public/components/cases/bitpool-process-mob.png">
+                  <source class="case-item-img bitpool-process" media="(min-width: 1025px)" srcset="/public/components/cases/bitpool-process.png">
                   <img class="case-item-img bitpool-process" src="/public/components/cases/bitpool-process.png" alt="Bitpool process" />
+                </picture>
                 </div>
               </div>
               <div class="cases-carousel-item grid-cell-10">
@@ -399,6 +415,7 @@ class TeamCard extends HTMLElement {
           </div>
           <div class="team-card team-card-4">
             <picture>
+            <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-4-mob.jpeg">
               <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-4.jpeg">
               <img class="team-card-img" src="/public/homepage/team-4.jpeg" alt="team pic" />
             </picture>
@@ -696,6 +713,8 @@ class TeamSlider extends HTMLElement {
                 </div>
               <div class="team-carousel-item">
                 <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-4-mob.jpeg">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-4.jpeg">
                   <img class="team-slider-img" src="/public/homepage/team-4.jpeg" alt="team" />
                 </picture>
               </div>
