@@ -767,7 +767,7 @@ header {
   margin: 0 23px;
 }
 
-#prev-slide, #next-slide {
+.prev-slide, .next-slide {
   cursor: pointer;
 }
 #current-slide,
