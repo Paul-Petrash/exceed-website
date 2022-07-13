@@ -1,7 +1,6 @@
 function noop(){};
 
-
-window.addEventListener('DOMContentLoaded', (event) => {;
+const handleChange = (event) => {;
   _init_siema('feedback-slider #feedback-carousel-container',
    'feedback-slider .cases-carousel-slide-counter',
     '.cases-carousel-slide-counter span #cases-carousel-current-slide-mob',{
@@ -23,8 +22,10 @@ window.addEventListener('DOMContentLoaded', (event) => {;
     forceSlidePos: true,
     prevNext: true,
   });
+}
 
-});
+window.addEventListener('DOMContentLoaded', (event) => handleChange(event));
+window.addEventListener('toggleDisplay', (event) => handleChange(event));
 
 function _init_siema(sel, navSel, infoSel, opts = {}) {
   let el = ge(sel);
