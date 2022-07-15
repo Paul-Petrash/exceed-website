@@ -210,20 +210,16 @@ function start_h(el, e) {
 
   let hasFile  = false;
 
-
-  console.log("will push=", fileInput, fileInput.files.length)
   if(fileInput && fileInput.files.length){
     const formData = new FormData();
     hasFile = true;
 
-    formData.append('form1_name', 'forSend.form1_name');
+    formData.append('form1_name', forSend.form1_name);
     formData.append('form1_email', forSend.form1_email);
     formData.append('form1_phone', forSend.form1_phone);
     formData.append('form1_comment', forSend.form1_comment);
-    // formData.append('form1_nda', forSend.form1_nda)
-    if(forSend.email){
-      formData.append('email', forSend.email);
-    }
+    formData.append('form1_nda', forSend.form1_nda)
+    if(forSend.email)formData.append('email', forSend.email)
     formData.append('history_count', forSend.history_count);
     formData.append('history', forSend.history);
     formData.append('file', fileInput.files[0]);

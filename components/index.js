@@ -117,14 +117,14 @@ class CasesGrid extends HTMLElement {
             <h3>Save Health</h3>
             <p>CRM-системы для частной клиники</p>
           </div>
-          <img class="case-item-img save-health" src="/public/components/cases/save-health.svg" alt="save health" />
+          <img class="case-item-img save-health" src="/public/components/cases/save-health.png" alt="save health" />
         </div>
         <div class="case-item grid-cell-2 hover-zone-2">
           <div class="case-item-text">
             <h3>Ukie</h3>
             <p>Сайт для британской геймдев-индустрии</p>
           </div>
-          <img class="case-item-img ukie" src="/public/components/cases/ukie.svg" alt="save health" />
+          <img class="case-item-img ukie" src="/public/components/cases/ukie.png" alt="save health" />
         </div>
         <div class="case-item grid-cell-3 hover-zone-3">
           <div class="case-item-text">
@@ -138,21 +138,33 @@ class CasesGrid extends HTMLElement {
             <h3>FinPro</h3>
             <p>CRM-система для финтех стартапа, со встроенной функцией звонков</p>
           </div>
-          <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
+          <picture>
+            <source class="case-item-img fin-pro" media="(max-width: 1024px)" srcset="/public/components/cases/finpro-mob.png">
+            <source class="case-item-img fin-pro" media="(min-width: 1025px)" srcset="/public/components/cases/finPro.png">
+            <img class="case-item-img fin-pro" src="/public/components/cases/finPro.png" alt="FinPro" />
+          </picture>
         </div>
         <div class="case-item grid-cell-5 hover-zone-5">
           <div class="case-item-text">
             <h3>What Song</h3>
             <p>Онлайн-сервис, для поиска популярные треков из любимых фильмов или сериалов</p>
           </div>
-          <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
+          <picture>
+            <source class="case-item-img what-song" media="(max-width: 1024px)" srcset="/public/components/cases/what-song-mob.png">
+            <source class="case-item-img what-song" media="(min-width: 1025px)" srcset="/public/components/cases/what-song.png">
+            <img class="case-item-img what-song" src="/public/components/cases/what-song.png" alt="What Song" />
+          </picture>
         </div>
         <div class="case-item grid-cell-6 hover-zone-6">
           <div class="case-item-text">
             <h3>Continental Clothing Co</h3>
             <p>Веб-платформа для продажи одежды с готовыми к печати принтами</p>
           </div>
-          <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
+          <picture>
+            <source class="case-item-img clothing" media="(max-width: 1024px)" srcset="/public/components/cases/clothing-mob.png">
+            <source class="case-item-img clothing" media="(min-width: 1025px)" srcset="/public/components/cases/clothing.png">
+            <img class="case-item-img clothing" src="/public/components/cases/clothing.png" alt="clothing" />
+          </picture>
         </div>
         <div class="case-item grid-cell-7 hover-zone-7">
           <div class="case-item-text">
@@ -167,7 +179,11 @@ class CasesGrid extends HTMLElement {
             <h3>GaiaHerbs</h3>
             <p>Интернет-магазин здорового питания</p>
           </div>
-          <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
+          <picture>
+            <source class="case-item-img gaia-herbs" media="(max-width: 1024px)" srcset="/public/components/cases/gaiaHerbs-mob.png">
+            <source class="case-item-img gaia-herbs" media="(min-width: 1025px)" srcset="/public/components/cases/gaiaHerbs.png">
+            <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
+          </picture>
         </div>
         <div class="case-item grid-cell-9 hover-zone-9">
           <div class="case-item-text">
@@ -186,7 +202,11 @@ class CasesGrid extends HTMLElement {
             <h3>Kopi-d Co</h3>
             <p>Быстрый, легкий и SEO-оптимизированный интернет-магазин</p>
           </div>
-          <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+          <picture>
+            <source class="case-item-img gaia-herbs" media="(max-width: 1024px)" srcset="/public/components/cases/kopi-d-mob.png">
+            <source class="case-item-img gaia-herbs" media="(min-width: 1025px)" srcset="/public/components/cases/kopi-d.png">
+            <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+          </picture>
         </div>
       </div>
     `;
@@ -205,57 +225,93 @@ class CasesCarousel extends HTMLElement {
                   <h3>Save Health</h3>
                   <p>CRM-системы для частной клиники</p>
                 </div>
-                <img class="case-item-img save-health" src="/public/components/cases/save-health.svg" alt="save health" />
+                <picture>
+                  <source class="case-item-img save-health" media="(max-width: 1024px)" srcset="/public/components/cases/save-health-mob.png">
+                  <source class="case-item-img save-health" media="(min-width: 1025px)" srcset="/public/components/cases/save-health.png">
+                  <img class="case-item-img save-health" src="/public/components/cases/save-health.png" alt="save health" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-2">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>Ukie</h3>
                   <p>Сайт для британской геймдев-индустрии</p>
                 </div>
-                <img class="case-item-img ukie" src="/public/components/cases/ukie.svg" alt="save health" />
+                <picture>
+                  <source class="case-item-img ukie" media="(max-width: 1024px)" srcset="/public/components/cases/ukie-mob.png">
+                  <source class="case-item-img ukie" media="(min-width: 1025px)" srcset="/public/components/cases/ukie.png">
+                  <img class="case-item-img ukie" src="/public/components/cases/ukie.png" alt="ukie" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-3">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>Real Estate</h3>
                   <p>CRM-система для риэлторского агентства</p>
                 </div>
-                <img class="case-item-img real-estate" src="/public/components/cases/real-estate.svg" alt="Real Estate" />
+                <picture>
+                  <source class="case-item-img real-estate" media="(max-width: 1024px)" srcset="/public/components/cases/real-estate-mob.png">
+                  <source class="case-item-img real-estate" media="(min-width: 1025px)" srcset="/public/components/cases/real-estate.svg">
+                  <img class="case-item-img real-estate" src="/public/components/cases/real-estate-desktop.png" alt="Real Estate" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-4">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>FinPro</h3>
                   <p>CRM-система для финтех стартапа, со встроенной функцией звонков</p>
                 </div>
-                <img class="case-item-img fin-pro" src="/public/components/cases/finPro.svg" alt="FinPro" />
+                <picture>
+                  <source class="case-item-img fin-pro" media="(max-width: 1024px)" srcset="/public/components/cases/finpro-mob.png">
+                  <source class="case-item-img fin-pro" media="(min-width: 1025px)" srcset="/public/components/cases/finPro.png">
+                  <img class="case-item-img fin-pro" src="/public/components/cases/finPro.png" alt="FinPro" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-5">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>What Song</h3>
                   <p>Онлайн-сервис, для поиска популярные треков из любимых фильмов или сериалов</p>
                 </div>
-                <img class="case-item-img what-song" src="/public/components/cases/what-song.svg" alt="What Song" />
+                <picture>
+                  <source class="case-item-img what-song" media="(max-width: 1024px)" srcset="/public/components/cases/what-song-mob.png">
+                  <source class="case-item-img what-song" media="(min-width: 1025px)" srcset="/public/components/cases/what-song.png">
+                  <img class="case-item-img what-song" src="/public/components/cases/what-song.png" alt="What Song" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-6">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>Continental Clothing Co</h3>
                   <p>Веб-платформа для продажи одежды с готовыми к печати принтами</p>
                 </div>
-                <img class="case-item-img clothing" src="/public/components/cases/clothing.svg" alt="clothing" />
+                <picture>
+                  <source class="case-item-img clothing" media="(max-width: 1024px)" srcset="/public/components/cases/clothing-mob.png">
+                  <source class="case-item-img clothing" media="(min-width: 1025px)" srcset="/public/components/cases/clothing.png">
+                  <img class="case-item-img clothing" src="/public/components/cases/clothing.png" alt="clothing" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-7">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>Palmetto Park</h3>
                   <p>Платформа для размещения объявлений о продаже недвижимости</p>
                 </div>
-                <img class="case-item-img palmetto-back" src="/public/components/cases/palmetto-back.png" alt="palmetto back" />
-                <img class="case-item-img palmetto-front" src="/public/components/cases/palmetto-front.png" alt="palmetto front" />
+                <picture>
+                  <source class="case-item-img palmetto-back" media="(max-width: 1024px)" srcset="/public/components/cases/palmetto-back-mob.png">
+                  <source class="case-item-img palmetto-back" media="(min-width: 1025px)" srcset="/public/components/cases/palmetto-back.png">
+                  <img class="case-item-img palmetto-back" src="/public/components/cases/palmetto-back.png" alt="palmetto back" />
+                </picture>
+                <picture>
+                  <source class="case-item-img palmetto-front" media="(max-width: 1024px)" srcset="/public/components/cases/palmetto-front-mob.png">
+                  <source class="case-item-img palmetto-front" media="(min-width: 1025px)" srcset="/public/components/cases/palmetto-front.png">
+                  <img class="case-item-img palmetto-front" src="/public/components/cases/palmetto-front.png" alt="palmetto front" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-8">
                 <div class="case-item-text case-item-text-mobile">
                   <h3>GaiaHerbs</h3>
                   <p>Интернет-магазин здорового питания</p>
                 </div>
-                <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
+                <picture>
+                  <source class="case-item-img gaia-herbs" media="(max-width: 1024px)" srcset="/public/components/cases/gaiaHerbs-mob.png">
+                  <source class="case-item-img gaia-herbs" media="(min-width: 1025px)" srcset="/public/components/cases/gaiaHerbs.png">
+                  <img class="case-item-img gaia-herbs" src="/public/components/cases/gaiaHerbs.png" alt="Gaia Herbs" />
+                </picture>
               </div>
               <div class="cases-carousel-item grid-cell-9">
                 <div class="case-item-text case-item-text-mobile">
@@ -263,8 +319,16 @@ class CasesCarousel extends HTMLElement {
                   <p>Технологическая экосистема, которая позволяет контролировать ресурсы и эффективность</p>
                 </div>
                 <div class="rotate">
+                <picture>
+                  <source class="case-item-img bitpool-passion" media="(max-width: 1024px)" srcset="/public/components/cases/bitpool-passion-mob.png">
+                  <source class="case-item-img bitpool-passion" media="(min-width: 1025px)" srcset="/public/components/cases/bitpool-passion.png">
                   <img class="case-item-img bitpool-passion" src="/public/components/cases/bitpool-passion.png" alt="Bitpool passion" />
+                </picture>
+                <picture>
+                  <source class="case-item-img bitpool-process" media="(max-width: 1024px)" srcset="/public/components/cases/bitpool-process-mob.png">
+                  <source class="case-item-img bitpool-process" media="(min-width: 1025px)" srcset="/public/components/cases/bitpool-process.png">
                   <img class="case-item-img bitpool-process" src="/public/components/cases/bitpool-process.png" alt="Bitpool process" />
+                </picture>
                 </div>
               </div>
               <div class="cases-carousel-item grid-cell-10">
@@ -272,7 +336,11 @@ class CasesCarousel extends HTMLElement {
                   <h3>Kopi-d Co</h3>
                   <p>Быстрый, легкий и SEO-оптимизированный интернет-магазин</p>
                 </div>
-                <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+                <picture>
+                  <source class="case-item-img gaia-herbs" media="(max-width: 1024px)" srcset="/public/components/cases/kopi-d-mob.png">
+                  <source class="case-item-img gaia-herbs" media="(min-width: 1025px)" srcset="/public/components/cases/kopi-d.png">
+                  <img class="case-item-img kopi-d" src="/public/components/cases/kopi-d.png" alt="Kopi-d Co" />
+                </picture>
               </div>
             </div>
           </div>
@@ -325,28 +393,60 @@ class TeamCard extends HTMLElement {
         </div>
         <div class="team-grid">
           <div class="team-card team-card-1">
-            <img class="team-card-img" src="/public/homepage/team-1.png" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-1-mob.png">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-1.png">
+              <img class="team-card-img" src="/public/homepage/team-1.png" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-2">
-            <img class="team-card-img" src="/public/homepage/team-2.jpeg" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-2-mob.jpeg">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-2.jpeg">
+              <img class="team-card-img" src="/public/homepage/team-2.jpeg" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-3">
-            <img class="team-card-img" src="/public/homepage/team-3.jpeg" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-3-mob.jpeg">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-3.jpeg">
+              <img class="team-card-img" src="/public/homepage/team-3.jpeg" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-4">
-            <img class="team-card-img" src="/public/homepage/team-4.jpeg" alt="team pic" />
+            <picture>
+            <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-4-mob.jpeg">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-4.jpeg">
+              <img class="team-card-img" src="/public/homepage/team-4.jpeg" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-5">
-            <img class="team-card-img" src="/public/homepage/team-5.png" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-5-mob.png">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-5.png">
+              <img class="team-card-img" src="/public/homepage/team-5.png" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-6">
-            <img class="team-card-img" src="/public/homepage/team-6.png" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-6-mob.png">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-6.png">
+              <img class="team-card-img" src="/public/homepage/team-6.png" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-7">
-            <img class="team-card-img" src="/public/homepage/team-7.jpeg" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-7-mob.jpeg">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-7.jpeg">
+              <img class="team-card-img" src="/public/homepage/team-7.jpeg" alt="team pic" />
+            </picture>
           </div>
           <div class="team-card team-card-8">
-            <img class="team-card-img" src="/public/homepage/team-8.jpeg" alt="team pic" />
+            <picture>
+              <source class="team-card-img" media="(max-width: 1024px)" srcset="/public/homepage/team-8-mob.jpeg">
+              <source class="team-card-img" media="(min-width: 1025px)" srcset="/public/homepage/team-8.jpeg">
+              <img class="team-card-img" src="/public/homepage/team-8.jpeg" alt="team pic" />
+            </picture>
           </div>
         </div>
       </div>
@@ -434,7 +534,7 @@ class FeedbackCarousel extends HTMLElement {
             <review-card
               name="Kit Norman"
               company="Director at Mercury Digital Assets Ltd"
-              avatar="/public/components/reviews/kit_norm.webp"
+              avatar="/public/components/reviews/kit_norm.png"
               date="17.03.2019"
               review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
             ></review-card>
@@ -591,28 +691,60 @@ class TeamSlider extends HTMLElement {
           <div id="team-slider">
             <div id="team-carousel-container">
               <div class="team-carousel-item">
+              <picture>
+                <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-1-mob.png">
+                <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-1.png">
                 <img class="team-slider-img" src="/public/homepage/team-1.png" alt="team" />
+              </picture>
               </div>
               <div class="team-carousel-item">
+              <picture>
+                <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-2-mob.jpeg">
+                <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-2.jpeg">
                 <img class="team-slider-img" src="/public/homepage/team-2.jpeg" alt="team" />
+              </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-3.jpeg" alt="team" />
+                <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-3-mob.jpeg">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-3.jpeg">
+                  <img class="team-slider-img" src="/public/homepage/team-3.jpeg" alt="team" />
+                </picture>
+                </div>
+              <div class="team-carousel-item">
+                <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-4-mob.jpeg">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-4.jpeg">
+                  <img class="team-slider-img" src="/public/homepage/team-4.jpeg" alt="team" />
+                </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-4.jpeg" alt="team" />
+                <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-5-mob.png">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-5.png">
+                  <img class="team-slider-img" src="/public/homepage/team-5.png" alt="team" />
+                </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-5.png" alt="team" />
+                <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-6-mob.png">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-6.png">
+                  <img class="team-slider-img" src="/public/homepage/team-6.png" alt="team" />
+                </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-6.png" alt="team" />
+                <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-7-mob.jpeg">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-7.jpeg">
+                  <img class="team-slider-img" src="/public/homepage/team-7.jpeg" alt="team" />
+                </picture>
               </div>
               <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-7.jpeg" alt="team" />
-              </div>
-              <div class="team-carousel-item">
-                <img class="team-slider-img" src="/public/homepage/team-8.jpeg" alt="team" />
+                <picture>
+                  <source class="team-slider-img" media="(max-width: 1024px)" srcset="/public/homepage/team-8-mob.jpeg">
+                  <source class="team-slider-img" media="(min-width: 1025px)" srcset="/public/homepage/team-8.jpeg">
+                  <img class="team-slider-img" src="/public/homepage/team-8.jpeg" alt="team" />
+                </picture>
               </div>
             </div>
           </div>

@@ -8,6 +8,9 @@ const process = document.getElementById('process');
 
 const processLayout = document.querySelector('.process-layout');
 const processLayoutMobile = document.querySelector('.process-layout-mobile');
+//list of containers with reusable components
+const casesDiv = document.querySelector('.cases'); //for cases-grid and cases-carousel
+const teamDiv = document.querySelector('.team-div'); //for team-grid and team-slider
 // feedback slider for desktop
 const carousel = document.getElementById('carousel');
 const feedback = document.getElementById('feedback');
@@ -19,15 +22,15 @@ const maxSlideSpan = document.getElementById('max-slide');
 const carouselMobile = document.getElementById('cases-carousel-container');
 const prevSlideMobile = document.getElementById('cases-carousel-prev-slide');
 const nextSlideMobile = document.getElementById('cases-carousel-next-slide');
-const currentSlideSpanMobile = document.getElementById('cases-carousel-current-slide');
-const maxSlideSpanMobile = document.getElementById('cases-carousel-max-slide');
+let currentSlideSpanMobile = document.getElementById('cases-carousel-current-slide');
+let maxSlideSpanMobile = document.getElementById('cases-carousel-max-slide');
 // team slider for mobile
 const teamContainer = document.getElementById('team-slider-mobile');
-const teamCarouselMobile = document.getElementById('team-carousel-container');
+let teamCarouselMobile = document.getElementById('team-carousel-container');
 const teamPrevSlideMobile = document.getElementById('team-carousel-prev-slide');
 const teamNextSlideMobile = document.getElementById('team-carousel-next-slide');
-const teamCurrentSlideSpanMobile = document.getElementById('team-carousel-current-slide');
-const teamMaxSlideSpanMobile = document.getElementById('team-carousel-max-slide');
+let teamCurrentSlideSpanMobile = document.getElementById('team-carousel-current-slide');
+let teamMaxSlideSpanMobile = document.getElementById('team-carousel-max-slide');
 // feedback slider for mobile devices
 const feedbackCarouselContainer = document.getElementById('feedback-car-mobile');
 const feedbackCarouselMobile = document.getElementById('feedback-slider');
@@ -37,6 +40,20 @@ const feedbackNextSlideMobile = document.getElementById('cases-carousel-next-sli
 const feedbackCurrentSlideMobile = document.getElementById('cases-carousel-current-slide-mob');
 const feedbackMaxSlideMobile = document.getElementById('cases-carousel-max-slide-mob');
 
+//nodes to be used as reusable components
+const casesGridClass = window.customElements.get('cases-grid');
+const casesCarouselClass = window.customElements.get('cases-carousel');
+const teamGridClass = window.customElements.get('team-grid');
+const teamCarouselClass = window.customElements.get('team-slider');
+
+const casesGridNode = new casesGridClass();
+const casesCarouselNode = new casesCarouselClass();
+const teamGridNode = new teamGridClass();
+const teamCarouselNode = new teamCarouselClass();
+//custom event to trigger sliders script
+const toggleDisplayevent = new Event('toggleDisplay');
+
+//slider counters
 let currentSlide = 1;
 let currentSlideMobile = 1;
 let sliderOffset = 96;
@@ -47,7 +64,7 @@ const maxSlidesMobile = 10;
 let feedbackCurrentItem = 1;
 const feedbackMaxItems = feedbackCarouselList?.childElementCount || 1;
 let teamCurrentItem = 1;
-const teamMaxItems = teamCarouselMobile?.childElementCount || 1;
+let teamMaxItems = teamCarouselMobile?.childElementCount || 1;
 const isLowerThan1024 = window.innerWidth < 1024;
 
 const handleMenu = () => {
@@ -64,101 +81,74 @@ const handleMenu = () => {
   }
 }
 
-// const openPrevSlide = () => {
-//   if (currentSlide > 1) {
-//     currentSlide -= 1;
-//     sliderOffset += 955;
-//   };
+const addCasesSliderCounter = () => {
+  console.log("CASES COUNTER ADDED")
+  currentSlideSpanMobile = document.getElementById('cases-carousel-current-slide');
+  maxSlideSpanMobile = document.getElementById('cases-carousel-max-slide');
 
-//   currentSlideSpan.innerHTML = `0${currentSlide}`;
-//   carousel.style["transform"] = `translateX(${sliderOffset}px)`;
-// }
+  currentSlideSpanMobile.innerHTML = `0${currentSlideMobile}`;
+  maxSlideSpanMobile.innerHTML = `${maxSlidesMobile < 10 ? '0' : ''}${maxSlidesMobile}`;
+}
 
-// const openNextSlide = () => {
-//   if (currentSlide < maxSlides) {
-//     currentSlide += 1;
-//     sliderOffset -= 955;
-//   };
+const addTeamSliderCounter = () => {
+  teamCurrentSlideSpanMobile = document.getElementById('team-carousel-current-slide');
+  teamMaxSlideSpanMobile = document.getElementById('team-carousel-max-slide');
+  teamCarouselMobile = document.getElementById('team-carousel-container');
+  teamMaxItems = teamCarouselMobile?.childElementCount || 1;
 
-//   carousel.style["transform"] = `translateX(${sliderOffset}px)`;
-//   currentSlideSpan.innerHTML = `0${currentSlide}`;
-// }
-
-// const openPrevSlideMobile = () => {
-//   if (currentSlideMobile > 1) {
-//     currentSlideMobile -= 1;
-//     sliderOffsetMobile += mobileSliderItem + 40;
-//   };
-
-//   currentSlideSpanMobile.innerHTML = `0${currentSlideMobile}`;
-//   carouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-// }
-
-// const openNextSlideMobile = () => {
-//   if (currentSlideMobile < maxSlidesMobile) {
-//     currentSlideMobile += 1;
-//     sliderOffsetMobile -= mobileSliderItem + 40
-//   };
-
-//   carouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-//   currentSlideSpanMobile.innerHTML = `${currentSlideMobile < 10 ? '0' : ''}${currentSlideMobile}`;
-// }
-
-// const openPrevSlideFeedbackMob = () => {
-//   if (feedbackCurrentItem > 1) {
-//     feedbackCurrentItem -= 1;
-//     sliderOffsetMobile += mobileSliderItem + 40;
-//   };
-
-//   feedbackCurrentSlideMobile.innerHTML = `0${feedbackCurrentItem}`;
-
-//   let cur = feedbackCarouselMobile.style["margin-left"];
-// console.log('LOOOG', cur);
-//   feedbackCarouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-// }
-
-// const openNextSlideFeedbackMob = () => {
-//   if (feedbackCurrentItem < feedbackMaxItems) {
-//     feedbackCurrentItem += 1;
-//     sliderOffsetMobile -= mobileSliderItem + 40
-//   };
-
-//   feedbackCarouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-//   feedbackCurrentSlideMobile.innerHTML = `${feedbackCurrentItem < 10 ? '0' : ''}${feedbackCurrentItem}`;
-// }
-
-// const casesPrevSlideMobile = () => {
-//   if (teamCurrentItem > 1) {
-//     teamCurrentItem -= 1;
-//     sliderOffsetMobile += mobileSliderItem + 40;
-//   };
-
-//   teamCurrentSlideSpanMobile.innerHTML = `0${teamCurrentItem}`;
-//   teamCarouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-// }
-
-// const casesNextSlideMobile = () => {
-//   if (teamCurrentItem < teamMaxItems) {
-//     teamCurrentItem += 1;
-//     sliderOffsetMobile -= mobileSliderItem + 40;
-//   };
-
-//   teamCarouselMobile.style["margin-left"] = `${sliderOffsetMobile}px`;
-//   teamCurrentSlideSpanMobile.innerHTML = `${teamCurrentItem < 10 ? '0' : ''}${teamCurrentItem}`;
-// }
+  teamCurrentSlideSpanMobile.innerHTML = `0${teamCurrentItem}`;
+  teamMaxSlideSpanMobile.innerHTML = `${teamMaxItems < 10 ? '0' : ''}${teamMaxItems}`;
+}
 
 const handleResize = () => {
   if (window.innerWidth < 1024) {
-    casesSlider && (casesSlider.parentNode.parentNode.style["display"] = 'block');
-    casesGrid && (casesGrid.style["display"] = 'none');
+    //add cases slider
+    if (casesDiv) {
+      if (casesDiv.children.length === 1) casesDiv.appendChild(casesCarouselNode);
+      if (casesDiv.children[1] === casesGridNode) {
+        casesDiv.children[1].remove();
+        casesDiv.appendChild(casesCarouselNode);
+        window.dispatchEvent(toggleDisplayevent);
+      }
+      addCasesSliderCounter();
+    }
+    //add team slider
+    if (teamDiv) {
+      if (teamDiv.children.length === 0) teamDiv.appendChild(teamCarouselNode);
+      if (teamDiv.children[0] === teamGridNode) {
+        teamDiv.children[0].remove();
+        teamDiv.appendChild(teamCarouselNode);
+        window.dispatchEvent(toggleDisplayevent);
+      }
+      addTeamSliderCounter();
+    }
+
     process && (process.style['margin-bottom'] = '144px');
     processLayout && (processLayout.hidden = true);
     processLayoutMobile && (processLayoutMobile.style["display"] = 'flex');
     // feedbackCarouselContainer && (feedbackCarouselContainer.hidden = false);
     feedback && (feedback.hidden = true);
+    
   } else {
-    casesSlider && (casesSlider.parentNode.parentNode.style["display"] = 'none');
-    casesGrid && (casesGrid.style["display"] = 'grid');
+    //add cases grid
+    if (casesDiv) {
+      if (casesDiv.children.length === 1) casesDiv.appendChild(casesGridNode);
+      if (casesDiv.children[1] === casesCarouselNode) {
+        casesDiv.children[1].remove();
+        casesDiv.appendChild(casesGridNode);
+        window.dispatchEvent(toggleDisplayevent);
+      }
+    }
+    //add team grid
+    if (teamDiv) {
+      if (teamDiv.children.length === 0) teamDiv.appendChild(teamGridNode);
+      if (teamDiv.children[0] === teamCarouselNode) {
+        teamDiv.children[0].remove();
+        teamDiv.appendChild(teamGridNode);
+        window.dispatchEvent(toggleDisplayevent);
+      }
+    }
+
     process && (process.style['margin-bottom'] = '1000px');
     processLayout && (processLayout.hidden = false);
     processLayoutMobile && (processLayoutMobile.style["display"] = 'none');
@@ -191,24 +181,16 @@ if (carousel) {
   carousel.style["transform"] = `translateX(${sliderOffset}px)`;
   currentSlideSpan.innerHTML = `0${currentSlide}`;
   maxSlideSpan.innerHTML = `0${maxSlides}`;
-  // prevSlide.addEventListener('click', () => openPrevSlide());
-  // nextSlide.addEventListener('click', () => openNextSlide());
 }
 if (feedbackCarouselContainer) {
   feedbackCurrentSlideMobile.innerHTML = `0${feedbackCurrentItem}`;
   feedbackMaxSlideMobile.innerHTML = `0${feedbackMaxItems}`;
-  // feedbackPrevSlideMobile.addEventListener('click', () => openPrevSlideFeedbackMob());
-  // feedbackNextSlideMobile.addEventListener('click', () => openNextSlideFeedbackMob());
 }
 if (carouselMobile) {
-  // prevSlideMobile.addEventListener('click', () => openPrevSlideMobile());
-  // nextSlideMobile.addEventListener('click', () => openNextSlideMobile());
   currentSlideSpanMobile.innerHTML = `0${currentSlideMobile}`;
   maxSlideSpanMobile.innerHTML = `${maxSlidesMobile < 10 ? '0' : ''}${maxSlidesMobile}`;
 }
 if (teamContainer) {
-  // teamPrevSlideMobile.addEventListener('click', () => casesPrevSlideMobile());
-  // teamNextSlideMobile.addEventListener('click', () => casesNextSlideMobile());
   teamCurrentSlideSpanMobile.innerHTML = `0${teamCurrentItem}`;
   teamMaxSlideSpanMobile.innerHTML = `${teamMaxItems < 10 ? '0' : ''}${teamMaxItems}`;
 }
