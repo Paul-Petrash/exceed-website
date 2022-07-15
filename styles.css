@@ -36,11 +36,6 @@ body {
   margin: 0 auto;
 }
 
-.body-scroll-disabled {
-  height: 100%;
-  overflow: hidden;
-}
-
 header {
   margin-top: 68px;
   margin-bottom: 68px;

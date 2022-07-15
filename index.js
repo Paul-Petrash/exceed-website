@@ -67,6 +67,13 @@ let teamCurrentItem = 1;
 let teamMaxItems = teamCarouselMobile?.childElementCount || 1;
 const isLowerThan1024 = window.innerWidth < 1024;
 
+
+const preventScroll = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  return false;
+}
+
 const handleMenu = () => {
   if (!burgerMenu.style['top'] || burgerMenu.style['top'] === '-800px') {
     window.scrollTo({
@@ -74,10 +81,11 @@ const handleMenu = () => {
       behavior: 'smooth',
     });
     burgerMenu.style['top'] = '0';
-    body.classList.add('body-scroll-disabled');
+    document.body.addEventListener('wheel', preventScroll, { passive: false });
+
   } else {
     burgerMenu.style['top'] = '-800px';
-    body.classList.remove('body-scroll-disabled');
+    document.body.removeEventListener('wheel', preventScroll);
   }
 }
 
