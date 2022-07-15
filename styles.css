@@ -1575,9 +1575,6 @@ footer {
   border-bottom: 3px solid var(--hover-purple);
   width: fit-content;
 }
-.libs-list {
-  overflow-y: scroll;
-}
 
 @media (max-width: 1024px) {
   .wrapper {padding: 0 50px}
