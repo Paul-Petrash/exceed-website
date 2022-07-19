@@ -627,6 +627,7 @@ class FeedbackSlider extends HTMLElement {
                   review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
                 ></review-card-mobile>
               </div>
+             <div class="cases-carousel-item">
                 <review-card-mobile
                   name="Arina Yakovleva"
                   company="Account Manager at OK Pixels"
