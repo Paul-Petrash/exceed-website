@@ -36,11 +36,6 @@ body {
   margin: 0 auto;
 }
 
-.body-scroll-disabled {
-  height: 100%;
-  overflow: hidden;
-}
-
 header {
   margin-top: 68px;
   margin-bottom: 68px;
@@ -1574,9 +1569,6 @@ footer {
   margin-bottom: 40px;
   border-bottom: 3px solid var(--hover-purple);
   width: fit-content;
-}
-.libs-list {
-  overflow-y: scroll;
 }
 
 @media (max-width: 1024px) {
