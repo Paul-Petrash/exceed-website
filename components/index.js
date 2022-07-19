@@ -525,13 +525,6 @@ class FeedbackCarousel extends HTMLElement {
               review="ITRUM разработали приложение для бронирования отелей, продемонстрировав качественный результат в обговоренные сроки. Стоит отметить эффективность их работы и готовность откликаться на идеи клиента. Это увлеченная команда, которая легко идет на контакт."
             ></review-card>
             <review-card
-              name="Gavin Wedell"
-              company="Founder & CEO at Change Activation"
-              avatar="/public/components/reviews/gavin_wedell.jpeg"
-              date="17.03.2019"
-              review="ITRUM предоставили нам услуги Fullstack-разработки для создания SaaS-платформы. Они показали себя как честный и надежный партнер с отличными навыками управления проектами. Качество работы – на высшем уровне, и мы получили положительные отзывы от клиентов."
-            ></review-card>
-            <review-card
               name="Kit Norman"
               company="Director at Mercury Digital Assets Ltd"
               avatar="/public/components/reviews/kit_norm.png"
@@ -627,15 +620,6 @@ class FeedbackSlider extends HTMLElement {
               </div>
               <div class="cases-carousel-item">
                 <review-card-mobile
-                  name="Gavin Wedell"
-                  company="Founder & CEO at Change Activation"
-                  avatar="/public/components/reviews/gavin_wedell.jpeg"
-                  date="17.03.2019"
-                  review="ITRUM предоставили нам услуги Fullstack-разработки для создания SaaS-платформы. Они показали себя как честный и надежный партнер с отличными навыками управления проектами. Качество работы – на высшем уровне, и мы получили положительные отзывы от клиентов."
-                ></review-card-mobile>
-              </div>
-              <div class="cases-carousel-item">
-                <review-card-mobile
                   name="Kit Norman"
                   company="Director at Mercury Digital Assets Ltd"
                   avatar="/public/components/reviews/kit_norm.webp"
@@ -643,7 +627,6 @@ class FeedbackSlider extends HTMLElement {
                   review="Мы проработали с этими ребятами уже несколько месяцев, и собираемся продолжать сотрудничество как можно дольше. Они приятные в общении и предоставляют очень качественные услуги по разумным ценам."
                 ></review-card-mobile>
               </div>
-              <div class="cases-carousel-item">
                 <review-card-mobile
                   name="Arina Yakovleva"
                   company="Account Manager at OK Pixels"
