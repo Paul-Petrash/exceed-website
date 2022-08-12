@@ -1,175 +1,392 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ITRUM - IT компания</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
-  <script src="/components/index.js"></script>
-  <script defer src="/index.js"></script>
-  <script src="scripts/header_footer_new.js"></script>
-  <script defer src="scripts/tiny-slider.js"></script>
-  <script defer src="scripts/sliders/index.js"></script>
-  <style>
-    .tns-outer{padding:0 !important}.tns-outer [hidden]{display:none !important}.tns-outer [aria-controls],.tns-outer [data-action]{cursor:pointer}.tns-slider{-webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s}.tns-slider>.tns-item{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.tns-horizontal.tns-subpixel{white-space:nowrap}.tns-horizontal.tns-subpixel>.tns-item{display:inline-block;vertical-align:top;white-space:normal}.tns-horizontal.tns-no-subpixel:after{content:'';display:table;clear:both}.tns-horizontal.tns-no-subpixel>.tns-item{float:left}.tns-horizontal.tns-carousel.tns-no-subpixel>.tns-item{margin-right:-100%}.tns-no-calc{position:relative;left:0}.tns-gallery{position:relative;left:0;min-height:1px}.tns-gallery>.tns-item{position:absolute;left:-100%;-webkit-transition:transform 0s, opacity 0s;-moz-transition:transform 0s, opacity 0s;transition:transform 0s, opacity 0s}.tns-gallery>.tns-slide-active{position:relative;left:auto !important}.tns-gallery>.tns-moving{-webkit-transition:all 0.25s;-moz-transition:all 0.25s;transition:all 0.25s}.tns-autowidth{display:inline-block}.tns-lazy-img{-webkit-transition:opacity 0.6s;-moz-transition:opacity 0.6s;transition:opacity 0.6s;opacity:0.6}.tns-lazy-img.tns-complete{opacity:1}.tns-ah{-webkit-transition:height 0s;-moz-transition:height 0s;transition:height 0s}.tns-ovh{overflow:hidden}.tns-visually-hidden{position:absolute;left:-10000em}.tns-transparent{opacity:0;visibility:hidden}.tns-fadeIn{opacity:1;filter:alpha(opacity=100);z-index:0}.tns-normal,.tns-fadeOut{opacity:0;filter:alpha(opacity=0);z-index:-1}.tns-vpfix{white-space:nowrap}.tns-vpfix>div,.tns-vpfix>li{display:inline-block}.tns-t-subp2{margin:0 auto;width:310px;position:relative;height:10px;overflow:hidden}.tns-t-ct{width:2333.3333333%;width:-webkit-calc(100% * 70 / 3);width:-moz-calc(100% * 70 / 3);width:calc(100% * 70 / 3);position:absolute;right:0}.tns-t-ct:after{content:'';display:table;clear:both}.tns-t-ct>div{width:1.4285714%;width:-webkit-calc(100% / 70);width:-moz-calc(100% / 70);width:calc(100% / 70);height:10px;float:left}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITRUM - IT компания</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
+    />
+    <script src="/components/index.js"></script>
+    <script defer src="/index.js"></script>
+    <script src="scripts/header_footer_new.js"></script>
+    <script defer src="scripts/tiny-slider.js"></script>
+    <script defer src="scripts/sliders/index.js"></script>
+    <style>
+      .tns-outer {
+        padding: 0 !important;
+      }
+      .tns-outer [hidden] {
+        display: none !important;
+      }
+      .tns-outer [aria-controls],
+      .tns-outer [data-action] {
+        cursor: pointer;
+      }
+      .tns-slider {
+        -webkit-transition: all 0s;
+        -moz-transition: all 0s;
+        transition: all 0s;
+      }
+      .tns-slider > .tns-item {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .tns-horizontal.tns-subpixel {
+        white-space: nowrap;
+      }
+      .tns-horizontal.tns-subpixel > .tns-item {
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+      }
+      .tns-horizontal.tns-no-subpixel:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .tns-horizontal.tns-no-subpixel > .tns-item {
+        float: left;
+      }
+      .tns-horizontal.tns-carousel.tns-no-subpixel > .tns-item {
+        margin-right: -100%;
+      }
+      .tns-no-calc {
+        position: relative;
+        left: 0;
+      }
+      .tns-gallery {
+        position: relative;
+        left: 0;
+        min-height: 1px;
+      }
+      .tns-gallery > .tns-item {
+        position: absolute;
+        left: -100%;
+        -webkit-transition: transform 0s, opacity 0s;
+        -moz-transition: transform 0s, opacity 0s;
+        transition: transform 0s, opacity 0s;
+      }
+      .tns-gallery > .tns-slide-active {
+        position: relative;
+        left: auto !important;
+      }
+      .tns-gallery > .tns-moving {
+        -webkit-transition: all 0.25s;
+        -moz-transition: all 0.25s;
+        transition: all 0.25s;
+      }
+      .tns-autowidth {
+        display: inline-block;
+      }
+      .tns-lazy-img {
+        -webkit-transition: opacity 0.6s;
+        -moz-transition: opacity 0.6s;
+        transition: opacity 0.6s;
+        opacity: 0.6;
+      }
+      .tns-lazy-img.tns-complete {
+        opacity: 1;
+      }
+      .tns-ah {
+        -webkit-transition: height 0s;
+        -moz-transition: height 0s;
+        transition: height 0s;
+      }
+      .tns-ovh {
+        overflow: hidden;
+      }
+      .tns-visually-hidden {
+        position: absolute;
+        left: -10000em;
+      }
+      .tns-transparent {
+        opacity: 0;
+        visibility: hidden;
+      }
+      .tns-fadeIn {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        z-index: 0;
+      }
+      .tns-normal,
+      .tns-fadeOut {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        z-index: -1;
+      }
+      .tns-vpfix {
+        white-space: nowrap;
+      }
+      .tns-vpfix > div,
+      .tns-vpfix > li {
+        display: inline-block;
+      }
+      .tns-t-subp2 {
+        margin: 0 auto;
+        width: 310px;
+        position: relative;
+        height: 10px;
+        overflow: hidden;
+      }
+      .tns-t-ct {
+        width: 2333.3333333%;
+        width: -webkit-calc(100% * 70 / 3);
+        width: -moz-calc(100% * 70 / 3);
+        width: calc(100% * 70 / 3);
+        position: absolute;
+        right: 0;
+      }
+      .tns-t-ct:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .tns-t-ct > div {
+        width: 1.4285714%;
+        width: -webkit-calc(100% / 70);
+        width: -moz-calc(100% / 70);
+        width: calc(100% / 70);
+        height: 10px;
+        float: left;
+      }
 
-    /*# sourceMappingURL=sourcemaps/tiny-slider.css.map */
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <main-header></main-header>
+      /*# sourceMappingURL=sourcemaps/tiny-slider.css.map */
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main-header></main-header>
 
-    <img class="info-background" src="/public/homepage/Ellipse.svg" alt="background svg" />
-    <img class="reviews-background" src="/public/homepage/reviews-background.svg" alt="background svg" />
+      <img
+        class="info-background"
+        src="/public/homepage/Ellipse.svg"
+        alt="background svg"
+      />
+      <img
+        class="reviews-background"
+        src="/public/homepage/reviews-background.svg"
+        alt="background svg"
+      />
 
-    <main>
-      <div class="info">
-        <h1 class="info-title">Эксперты в мобильной и веб-разработке</h1>
-        <ul class="info-list">
-          <li class="info-list-item hover-text">Web</li>
-          <li class="info-list-item hover-text">Mobile</li>
-          <li class="info-list-item hover-text">DevOps</li>
-          <li class="info-list-item hover-text">CRM</li>
-        </ul>
+      <main>
+        <div class="info">
+          <h1 class="info-title">Эксперты в мобильной и веб-разработке</h1>
+          <ul class="info-list">
+            <li class="info-list-item hover-text">Web</li>
+            <li class="info-list-item hover-text">Mobile</li>
+            <li class="info-list-item hover-text">DevOps</li>
+            <li class="info-list-item hover-text">CRM</li>
+          </ul>
 
-        <div class="info-cards">
-          <grey-card
-            title="Веб-разработка"
-            hover="web"
-            fields='[
+          <div class="info-cards">
+            <grey-card
+              title="Веб-разработка"
+              hover="web"
+              fields='[
               "Customer Relationship Management",
               "Консалтинг",
               "UI/UX дизайн",
               "Разработка «под ключ»"
             ]'
-          >
-          </grey-card>
-          <grey-card
-            title="Мобильная разработка"
-            hover="mobile"
-            fields='[
+            >
+            </grey-card>
+            <grey-card
+              title="Мобильная разработка"
+              hover="mobile"
+              fields='[
               "Разработка мобильных приложений Android/IOS",
               "Консалтинг",
               "UI/UX дизайн",
               "Разработка «под ключ»"
             ]'
-          >
-          </grey-card>
-          <grey-card
-            title="DevOps"
-            hover="devops"
-            fields='[
+            >
+            </grey-card>
+            <grey-card
+              title="DevOps"
+              hover="devops"
+              fields='[
               "QA тестирование",
               "Автоматизированное тестирование серверной части продукта",
               "CI/CD",
               "Облачные решения"
             ]'
-          >
-          </grey-card>
-          <grey-card
-            title="Расширение и выделение команды"
-            hover="team"
-            fields='[
+            >
+            </grey-card>
+            <grey-card
+              title="Расширение и выделение команды"
+              hover="team"
+              fields='[
               "Привлечение новых специалистов",
               "Адаптация",
               "Работа над вашим проектом"
             ]'
-          >
-          </grey-card>
-          <grey-card
-            title="Менторство и консультации для бизнеса"
-            hover="buisness-star"
-            fields='[
+            >
+            </grey-card>
+            <grey-card
+              title="Менторство и консультации для бизнеса"
+              hover="buisness-star"
+              fields='[
               "Коллективный менторинг",
               "Групповой менторинг",
               "Индивидуальный менторинг"
             ]'
-          >
-          </grey-card>
-          <grey-card
-            title="Техподдержка и обслуживание продукта"
-            hover="tech-support"
-            fields='[
+            >
+            </grey-card>
+            <grey-card
+              title="Техподдержка и обслуживание продукта"
+              hover="tech-support"
+              fields='[
               "Техподдержка 24/7",
               "Помощь в решении технических проблем",
               "Помощь по восстановлению роботоспособности продукта"
             ]'
-          >
-          </grey-card>
-        </div>
-      </div>
-
-      <div class="cases">
-        <div class="section-header">
-          <h2 class="section-name">Кейсы</h2>
-          <a href="/pages/cases.html" class="tag tag-link">Все кейсы</a>
+            >
+            </grey-card>
+          </div>
         </div>
 
-        <!-- <cases-grid></cases-grid>
+        <div class="cases">
+          <div class="section-header">
+            <h2 class="section-name">Кейсы</h2>
+            <a href="/pages/cases.html" class="tag tag-link">Все кейсы</a>
+          </div>
+
+          <!-- <cases-grid></cases-grid>
         <cases-carousel></cases-carousel> -->
-      </div>
-
-      <!-- <feedback-carousel></feedback-carousel> -->
-      <feedback-slider></feedback-slider>
-
-      <div class="reasons">
-        <div class="section-header">
-          <h2 class="section-name">Почему мы?</h2>
         </div>
-        <div class="reasons-grid">
-          <div class="reasons-item info-card">
-            <div class="reasons-card-header">
-              <img src="./public/homepage/reason-target.svg" alt="reason target" />
-              <h3 class="card-name">Работа на результат</h3>
-            </div>
-            <p class="card-text">Создаем масштабируемые IT-продукты для различных областей, в соответствии с графиком и в рамках бюджета. Мы всегда берём на себя отвественность за результат.</p>
+
+        <!-- <feedback-carousel></feedback-carousel> -->
+        <feedback-slider></feedback-slider>
+
+        <div class="reasons">
+          <div class="section-header">
+            <h2 class="section-name">Почему мы?</h2>
           </div>
-          <div class="reasons-item info-card">
-            <div class="reasons-card-header">
-              <img src="./public/homepage/reason-human.svg" alt="reason target" />
-              <h3 class="card-name">Индивидуальный подход</h3>
+          <div class="reasons-grid">
+            <div class="reasons-item info-card">
+              <div class="reasons-card-header">
+                <img
+                  src="./public/homepage/reason-target.svg"
+                  alt="reason target"
+                />
+                <h3 class="card-name">Работа на результат</h3>
+              </div>
+              <p class="card-text">
+                Создаем масштабируемые IT-продукты для различных областей, в
+                соответствии с графиком и в рамках бюджета. Мы всегда берём на
+                себя отвественность за результат.
+              </p>
             </div>
-            <p class="card-text">Мы адаптируемся под каждого клиента, учитывая специфику и требования бизнес-задач. Работаем в удобном для вас режиме и часовом поясе.</p>
-          </div>
-          <div class="reasons-item info-card">
-            <div class="reasons-card-header">
-              <img src="./public/homepage/reason-quality.svg" alt="reason target" />
-              <h3 class="card-name">Стандарты качества</h3>
+            <div class="reasons-item info-card">
+              <div class="reasons-card-header">
+                <img
+                  src="./public/homepage/reason-human.svg"
+                  alt="reason target"
+                />
+                <h3 class="card-name">Индивидуальный подход</h3>
+              </div>
+              <p class="card-text">
+                Мы адаптируемся под каждого клиента, учитывая специфику и
+                требования бизнес-задач. Работаем в удобном для вас режиме и
+                часовом поясе.
+              </p>
             </div>
-            <p class="card-text">Мы предоставляем услуги по созданию программного обеспечения для различных областей, объединяя передовые технологии с проверенными методами разработки.</p>
-          </div>
-          <div class="reasons-item info-card">
-            <div class="reasons-card-header">
-              <img src="./public/homepage/reason-grow.svg" alt="reason target" />
-              <h3 class="card-name">Непрерывный рост</h3>
+            <div class="reasons-item info-card">
+              <div class="reasons-card-header">
+                <img
+                  src="./public/homepage/reason-quality.svg"
+                  alt="reason target"
+                />
+                <h3 class="card-name">Стандарты качества</h3>
+              </div>
+              <p class="card-text">
+                Мы предоставляем услуги по созданию программного обеспечения для
+                различных областей, объединяя передовые технологии с
+                проверенными методами разработки.
+              </p>
             </div>
-            <p class="card-text">Нас мотивирует желание учиться и совершенствоваться. Мы стремимся к высоким результатам для наших клиентов и применяем методы Agile для сокращения времени и расходов.</p>
+            <div class="reasons-item info-card">
+              <div class="reasons-card-header">
+                <img
+                  src="./public/homepage/reason-grow.svg"
+                  alt="reason target"
+                />
+                <h3 class="card-name">Непрерывный рост</h3>
+              </div>
+              <p class="card-text">
+                Нас мотивирует желание учиться и совершенствоваться. Мы
+                стремимся к высоким результатам для наших клиентов и применяем
+                методы Agile для сокращения времени и расходов.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="team-div">
-        <!-- <team-grid></team-grid>
+        <div class="team-div">
+          <!-- <team-grid></team-grid>
         <team-slider></team-slider> -->
-      </div>
+        </div>
 
-      <rewards-carousel></rewards-carousel>
+        <rewards-carousel></rewards-carousel>
 
-      <request-form></request-form>
-    </main>
+        <request-form></request-form>
+      </main>
 
-    <main-footer></main-footer>
-  </div>
+      <main-footer></main-footer>
+    </div>
 
-  <script type="module" src="/scripts/dom.js"></script>
-  <script type="module" src="/scripts/form.js"></script>
-  <script type="module" src="/scripts/header_footer.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="module" src="/scripts/dom.js"></script>
+    <script type="module" src="/scripts/form.js"></script>
+    <script type="module" src="/scripts/header_footer.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
 
-</body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
 
+      ym(89927231, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/89927231"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </body>
 </html>

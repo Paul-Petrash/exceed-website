@@ -1,215 +1,335 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ITRUM - IT компания</title>
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
-  <script src="/components/index.js"></script>
-  <script defer src="/index.js"></script>
-  <script src="/scripts/header_footer_new.js"></script>
-  <script defer src="/scripts/tiny-slider.js"></script>
-  <script defer src="/scripts/sliders/index.js"></script>
-</head>
-<body>
-  <div class="wrapper">
-    <main-header></main-header>
-    <img class="cases-logo-background" src="/public/services/background-circules.svg" alt="background svg" />
-    <div class="services-solutions-background"></div>
-    <div class="services-stack-background"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITRUM - IT компания</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
+    />
+    <script src="/components/index.js"></script>
+    <script defer src="/index.js"></script>
+    <script src="/scripts/header_footer_new.js"></script>
+    <script defer src="/scripts/tiny-slider.js"></script>
+    <script defer src="/scripts/sliders/index.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main-header></main-header>
+      <img
+        class="cases-logo-background"
+        src="/public/services/background-circules.svg"
+        alt="background svg"
+      />
+      <div class="services-solutions-background"></div>
+      <div class="services-stack-background"></div>
 
-    <main>
-      <div class="info">
-        <h1 class="info-title">ITRUM - ваш партнёр в мире IT</h1>
-        <p class="team-about">
-          Мы поможем оцифровать ваши рабочие процессы, улучшить пользовательский опыт и провести редизайн
-        </p>
-        <button id="discuss-btn" onclick="ClickDiscuss();">Обсудить проект</button>
-      </div>
-
-      <div class="services">
-        <div class="section-header">
-          <h2 class="section-name">Digital-решения для любых целей</h2>
+      <main>
+        <div class="info">
+          <h1 class="info-title">ITRUM - ваш партнёр в мире IT</h1>
+          <p class="team-about">
+            Мы поможем оцифровать ваши рабочие процессы, улучшить
+            пользовательский опыт и провести редизайн
+          </p>
+          <button id="discuss-btn" onclick="ClickDiscuss();">
+            Обсудить проект
+          </button>
         </div>
-        <ul class="services-list">
-          <li class="info-card">
-            <p class="info-card-title">Адаптивные веб-сайты</p>
-            <p class="service-card-text">Что делает адаптивное веб-приложение? Динамически подстраивается под различные типы экранов: ПК, смартфон, планшет и другие, даже если окно браузера изменилось на один пиксель. Что это дает? Отличную работу сайта на мобильных устройствах и экономию времени и средств, т.к. не требуется нативное приложение для Android или iOS</p>
-            <span class="tags-list">
-              <span class="tag">CSS Flexbox</span>
-              <span class="tag">CSS Grid</span>
-              <span class="tag">Bootstrap</span>
+
+        <div class="services">
+          <div class="section-header">
+            <h2 class="section-name">Digital-решения для любых целей</h2>
+          </div>
+          <ul class="services-list">
+            <li class="info-card">
+              <p class="info-card-title">Адаптивные веб-сайты</p>
+              <p class="service-card-text">
+                Что делает адаптивное веб-приложение? Динамически подстраивается
+                под различные типы экранов: ПК, смартфон, планшет и другие, даже
+                если окно браузера изменилось на один пиксель. Что это дает?
+                Отличную работу сайта на мобильных устройствах и экономию
+                времени и средств, т.к. не требуется нативное приложение для
+                Android или iOS
+              </p>
+              <span class="tags-list">
+                <span class="tag">CSS Flexbox</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Bootstrap</span>
+              </span>
+            </li>
+            <li class="info-card">
+              <p class="info-card-title">Прогрессивные веб-приложения</p>
+              <p class="service-card-text">
+                Это веб-сайты с расширенными мобильными функциями:
+                push-уведомления, полноэкранный интерфейс, быстрая загрузка и
+                т.д. Они поддерживают различные операционные системы и легко
+                устанавливаются на главный экран
+              </p>
+              <span class="tags-list">
+                <span class="tag">React</span>
+                <span class="tag">Cache API</span>
+                <span class="tag">PRPL Pattern</span>
+                <span class="tag">HTTP/2 + Server Push</span>
+              </span>
+            </li>
+            <li class="info-card">
+              <p class="info-card-title">Одностраничное приложение (SPA)</p>
+              <p class="service-card-text">
+                Быстро загружающиеся сайты используют единый HTML-документ для
+                всех страниц, кэшируя локальные данные и обновляя только тот
+                контент, который требуется пользователю. Первая загрузка может
+                занять некоторое время, а дальнейшие будут мгновенными. Наши SPA
+                работают в разных браузерах быстро и без сбоев
+              </p>
+              <span class="tags-list">
+                <span class="tag">AJAX</span>
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS 3</span>
+                <span class="tag">React</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="services">
+          <div class="section-header">
+            <h2 class="section-name">Услуги по разработке веб-приложений</h2>
+          </div>
+          <div class="reasons-grid">
+            <div class="reasons-item info-card">
+              <span class="background-reason-card"></span>
+              <div class="services-card-header">
+                <img src="/public/services/consulting.svg" alt="consulting" />
+                <h3 class="card-name">Консалтинг</h3>
+              </div>
+              <p class="card-text">
+                Наши бизнес-аналитики помогут выбрать функционал продукта для
+                реализации вашей идеи, а также предоставят оценку времени и
+                бюджета. Наши инженеры помогут определиться с архитектурой,
+                подходом к разработке и стеком технологий.
+              </p>
+            </div>
+            <div class="reasons-item info-card">
+              <div class="services-card-header">
+                <img src="/public/services/design.svg" alt="ui/ux design" />
+                <h3 class="card-name">UX/UI дизайн</h3>
+              </div>
+              <p class="card-text">
+                Мы оптимизируем загрузку страниц и создаем адаптивные веб-сайты
+                по Material Design для работы на любом устройстве. Специалисты
+                по UX/UI готовят макеты, предоставляют несколько визуальных
+                концепций и продумывают каждый экран.
+              </p>
+            </div>
+            <div class="reasons-item info-card">
+              <div class="services-card-header">
+                <img
+                  src="/public/services/modernization.svg"
+                  alt="modernization"
+                />
+                <h3 class="card-name">Модернизация веб-приложений</h3>
+              </div>
+              <p class="card-text">
+                Нужно перестроить старое программное обеспечение или сделать
+                интерфейс более понятным? Возможно, добавить новые функции или
+                перенести ПО в облако? Наши специалисты изучат продукт и
+                проконсультируют, как лучше обновить его.
+              </p>
+            </div>
+            <div class="reasons-item info-card">
+              <div class="services-card-header">
+                <img src="/public/services/key.svg" alt="development" />
+                <h3 class="card-name">Разработка «Под ключ»</h3>
+              </div>
+              <p class="card-text">
+                Мы предлагаем веб-разработку полного цикла: от консультирования
+                до выпуска конечного продукта. В нашу команду входят все
+                необходимые вам технические специалисты: UX/UI дизайнеры,
+                фронтенд- и бэкенд-разработчики, инженеры QA и DevOps.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="process">
+          <div class="section-header">
+            <h2 class="section-name">Процесс веб-разработки</h2>
+          </div>
+          <!-- Desktop layout -->
+          <div class="process-layout" hidden>
+            <span class="process-step process-step-1">Анализ проекта</span>
+            <span class="process-step-1-tooltip">
+              Изучим ваши требования (идея, особенности, платформы), составим
+              спецификации и проведем расчеты
             </span>
-          </li>
-          <li class="info-card">
-            <p class="info-card-title">Прогрессивные веб-приложения</p>
-            <p class="service-card-text">Это веб-сайты с расширенными мобильными функциями: push-уведомления, полноэкранный интерфейс, быстрая загрузка и т.д. Они поддерживают различные операционные системы и легко устанавливаются на главный экран</p>
-            <span class="tags-list">
-              <span class="tag">React</span>
-              <span class="tag">Cache API</span>
-              <span class="tag">PRPL Pattern</span>
-              <span class="tag">HTTP/2 + Server Push</span>
+            <div class="dashed-line-1"></div>
+
+            <span class="process-step process-step-2">Дизайн продукта</span>
+            <span class="process-step-2-tooltip">
+              UX/UI дизайнеры готовят 2-3 визуальных концепции для демонстрации
+              примеров некоторых экранов, чтобы вы могли выбрать стиль. Затем
+              создают пользовательский интерфейс для каждого экрана. Вы также
+              получите руководство по стилю: цвета, шрифты, логотипы и т. д.
             </span>
-          </li>
-          <li class="info-card">
-            <p class="info-card-title">Одностраничное приложение (SPA)</p>
-            <p class="service-card-text">Быстро загружающиеся сайты используют единый HTML-документ для всех страниц, кэшируя локальные данные и обновляя только тот контент, который требуется пользователю. Первая загрузка может занять некоторое время, а дальнейшие будут мгновенными. Наши SPA работают в разных браузерах быстро и без сбоев</p>
-            <span class="tags-list">
-              <span class="tag">AJAX</span>
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS 3</span>
-              <span class="tag">React</span>
-            </span>
-          </li>
-        </ul>
-      </div>
+            <div class="dashed-line-2"></div>
 
-      <div class="services">
-        <div class="section-header">
-          <h2 class="section-name">Услуги по разработке веб-приложений</h2>
+            <span class="process-step process-step-3"
+              >Development & QA tests</span
+            >
+            <div class="dashed-line-3"></div>
+
+            <span class="process-step process-step-4">Релиз продукта</span>
+            <div class="dashed-line-4"></div>
+
+            <span class="process-step process-step-5"
+              >Техническое обслуживание</span
+            >
+          </div>
+          <!-- Mobile layout -->
+          <div class="process-layout-mobile">
+            <div class="process-layout-mobile-group">
+              <span class="process-step-mobile process-step-1-mobile"
+                >Анализ проекта</span
+              >
+              <span class="process-step-tooltip process-step-tooltip-mob-1">
+                Изучим ваши требования (идея, особенности, платформы), составим
+                спецификации и проведем расчеты
+              </span>
+            </div>
+            <div class="dashed-line-mobile"></div>
+            <div class="process-layout-mobile-group">
+              <span class="process-step-mobile process-step-2-mobile"
+                >Дизайн продукта</span
+              >
+              <span class="process-step-tooltip process-step-tooltip-mob-2">
+                UX/UI дизайнеры готовят 2-3 визуальных концепции для
+                демонстрации примеров некоторых экранов, чтобы вы могли выбрать
+                стиль. Затем создают пользовательский интерфейс для каждого
+                экрана. Вы также получите руководство по стилю: цвета, шрифты,
+                логотипы и т. д.
+              </span>
+            </div>
+            <div class="dashed-line-mobile"></div>
+
+            <span class="process-step-mobile">Development & QA tests</span>
+            <div class="dashed-line-mobile"></div>
+
+            <span class="process-step-mobile">Релиз продукта</span>
+            <div class="dashed-line-mobile"></div>
+
+            <span class="process-step-mobile">Техническое обслуживание</span>
+          </div>
         </div>
-        <div class="reasons-grid">
-          <div class="reasons-item info-card">
-            <span class="background-reason-card"></span>
-            <div class="services-card-header">
-              <img src="/public/services/consulting.svg" alt="consulting" />
-              <h3 class="card-name">Консалтинг</h3>
+
+        <div class="tech-stack">
+          <div class="section-header">
+            <h2 class="section-name">Стек технологий</h2>
+          </div>
+          <div class="tech-stack-list">
+            <div class="tech-stack-card info-card">
+              <h4 class="tech-stack-card-title">Фронтенд</h4>
+              <div class="libs-list">
+                <img
+                  src="/public/services/frontend-stack.svg"
+                  alt="frontend stack"
+                />
+              </div>
             </div>
-            <p class="card-text">Наши бизнес-аналитики помогут выбрать функционал продукта для реализации вашей идеи, а также предоставят оценку времени и бюджета. Наши инженеры помогут определиться с архитектурой, подходом к разработке и стеком технологий.</p>
-          </div>
-          <div class="reasons-item info-card">
-            <div class="services-card-header">
-              <img src="/public/services/design.svg" alt="ui/ux design" />
-              <h3 class="card-name">UX/UI дизайн</h3>
+            <div class="tech-stack-card info-card">
+              <h4 class="tech-stack-card-title">Базы данных</h4>
+              <div class="libs-list">
+                <img src="/public/services/db.svg" alt="databases sttack" />
+              </div>
             </div>
-            <p class="card-text">Мы оптимизируем загрузку страниц и создаем адаптивные веб-сайты по Material Design для работы на любом устройстве. Специалисты по UX/UI готовят макеты, предоставляют несколько визуальных концепций и продумывают каждый экран.</p>
-          </div>
-          <div class="reasons-item info-card">
-            <div class="services-card-header">
-              <img src="/public/services/modernization.svg" alt="modernization" />
-              <h3 class="card-name">Модернизация веб-приложений</h3>
+            <div class="tech-stack-card info-card">
+              <h4 class="tech-stack-card-title">Бэкенд</h4>
+              <div class="libs-list">
+                <img
+                  src="/public/services/backend-stack.svg"
+                  alt="backend stack"
+                />
+              </div>
             </div>
-            <p class="card-text">Нужно перестроить старое программное обеспечение или сделать интерфейс более понятным? Возможно, добавить новые функции или перенести ПО в облако? Наши специалисты изучат продукт и проконсультируют, как лучше обновить его.</p>
-          </div>
-          <div class="reasons-item info-card">
-            <div class="services-card-header">
-              <img src="/public/services/key.svg" alt="development" />
-              <h3 class="card-name">Разработка «Под ключ» </h3>
-            </div>
-            <p class="card-text">Мы предлагаем веб-разработку полного цикла: от консультирования до выпуска конечного продукта. В нашу команду входят все необходимые вам технические специалисты: UX/UI дизайнеры, фронтенд- и бэкенд-разработчики, инженеры QA и DevOps.</p>
-          </div>
-        </div>
-      </div>
-
-      <div id="process">
-        <div class="section-header">
-          <h2 class="section-name">Процесс веб-разработки</h2>
-        </div>
-        <!-- Desktop layout -->
-        <div class="process-layout" hidden>
-          <span class="process-step process-step-1">Анализ проекта</span>
-          <span class="process-step-1-tooltip">
-            Изучим ваши требования (идея, особенности, платформы), составим спецификации и проведем расчеты
-          </span>
-          <div class="dashed-line-1"></div>
-
-          <span class="process-step process-step-2">Дизайн продукта</span>
-          <span class="process-step-2-tooltip">
-            UX/UI дизайнеры готовят 2-3 визуальных концепции для демонстрации примеров некоторых экранов, чтобы вы могли выбрать стиль. Затем создают пользовательский интерфейс для каждого экрана. Вы также получите руководство по стилю: цвета, шрифты, логотипы и т. д.
-          </span>
-          <div class="dashed-line-2"></div>
-
-          <span class="process-step process-step-3">Development & QA tests</span>
-          <div class="dashed-line-3"></div>
-
-          <span class="process-step process-step-4">Релиз продукта</span>
-          <div class="dashed-line-4"></div>
-
-          <span class="process-step process-step-5">Техническое обслуживание</span>
-        </div>
-        <!-- Mobile layout -->
-        <div class="process-layout-mobile">
-          <div class="process-layout-mobile-group">
-            <span class="process-step-mobile process-step-1-mobile">Анализ проекта</span>
-            <span class="process-step-tooltip process-step-tooltip-mob-1">
-              Изучим ваши требования (идея, особенности, платформы), составим спецификации и проведем расчеты
-            </span>
-          </div>
-          <div class="dashed-line-mobile"></div>
-          <div class="process-layout-mobile-group">
-            <span class="process-step-mobile process-step-2-mobile">Дизайн продукта</span>
-            <span class="process-step-tooltip process-step-tooltip-mob-2">
-              UX/UI дизайнеры готовят 2-3 визуальных концепции для демонстрации примеров некоторых экранов, чтобы вы могли выбрать стиль. Затем создают пользовательский интерфейс для каждого экрана. Вы также получите руководство по стилю: цвета, шрифты, логотипы и т. д.
-            </span>
-          </div>
-          <div class="dashed-line-mobile"></div>
-
-          <span class="process-step-mobile">Development & QA tests</span>
-          <div class="dashed-line-mobile"></div>
-
-          <span class="process-step-mobile">Релиз продукта</span>
-          <div class="dashed-line-mobile"></div>
-
-          <span class="process-step-mobile">Техническое обслуживание</span>
-        </div>
-      </div>
-
-      <div class="tech-stack">
-        <div class="section-header">
-          <h2 class="section-name">Стек технологий</h2>
-        </div>
-        <div class="tech-stack-list">
-          <div class="tech-stack-card info-card">
-            <h4 class="tech-stack-card-title">Фронтенд</h4>
-            <div class="libs-list">
-              <img src="/public/services/frontend-stack.svg" alt="frontend stack" />
-            </div>
-          </div>
-          <div class="tech-stack-card info-card">
-            <h4 class="tech-stack-card-title">Базы данных</h4>
-            <div class="libs-list">
-              <img src="/public/services/db.svg" alt="databases sttack" />
-            </div>
-          </div>
-          <div class="tech-stack-card info-card">
-            <h4 class="tech-stack-card-title">Бэкенд</h4>
-            <div class="libs-list">
-              <img src="/public/services/backend-stack.svg" alt="backend stack" />
-            </div>
-          </div>
-          <div class="tech-stack-card info-card">
-            <h4 class="tech-stack-card-title">Фреймворки</h4>
-            <div class="libs-list">
-              <img src="/public/services/frameworks.svg" alt="frameworks" />
+            <div class="tech-stack-card info-card">
+              <h4 class="tech-stack-card-title">Фреймворки</h4>
+              <div class="libs-list">
+                <img src="/public/services/frameworks.svg" alt="frameworks" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="cases">
-        <div class="section-header">
-          <h2 class="section-name">Кейсы</h2>
-          <a href="/pages/cases.html" class="tag tag-link">Все кейсы</a>
-        </div>
+        <div class="cases">
+          <div class="section-header">
+            <h2 class="section-name">Кейсы</h2>
+            <a href="/pages/cases.html" class="tag tag-link">Все кейсы</a>
+          </div>
 
-        <!-- <cases-grid></cases-grid>
+          <!-- <cases-grid></cases-grid>
         <cases-carousel></cases-carousel> -->
-      </div>
+        </div>
 
-      <!-- <feedback-carousel></feedback-carousel> -->
-      <feedback-slider></feedback-slider>
+        <!-- <feedback-carousel></feedback-carousel> -->
+        <feedback-slider></feedback-slider>
 
-      <request-form></request-form>
-    </main>
+        <div class="request">
+          <request-title></request-title>
+          <request-form></request-form>
+        </div>
+      </main>
 
-    <main-footer></main-footer>
-  </div>
+      <main-footer></main-footer>
+    </div>
 
-  <script type="module" src="/scripts/dom.js"></script>
-  <script type="module" src="/scripts/form.js"></script>
-  <script type="module" src="/scripts/header_footer.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-</body>
+    <script type="module" src="/scripts/dom.js"></script>
+    <script type="module" src="/scripts/form.js"></script>
+    <script type="module" src="/scripts/header_footer.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(89927231, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/89927231"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </body>
 </html>

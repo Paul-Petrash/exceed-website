@@ -52,11 +52,11 @@ class Header extends HTMLElement {
 
 class ReviewCard extends HTMLElement {
   connectedCallback() {
-    const name = this.getAttribute('name') || "";
-    const company = this.getAttribute('company') || "no company";
-    const review = this.getAttribute('review') || "no text";
-    const avatar = this.getAttribute('avatar');
-    const date = this.getAttribute('date') || "no date";
+    const name = this.getAttribute("name") || "";
+    const company = this.getAttribute("company") || "no company";
+    const review = this.getAttribute("review") || "no text";
+    const avatar = this.getAttribute("avatar");
+    const date = this.getAttribute("date") || "no date";
 
     this.innerHTML = `
       <div class="carousel-card">
@@ -81,11 +81,11 @@ class ReviewCard extends HTMLElement {
 
 class ReviewCardMobile extends HTMLElement {
   connectedCallback() {
-    const name = this.getAttribute('name') || "";
-    const company = this.getAttribute('company') || "no company";
-    const review = this.getAttribute('review') || "no text";
-    const avatar = this.getAttribute('avatar');
-    const date = this.getAttribute('date') || "no date";
+    const name = this.getAttribute("name") || "";
+    const company = this.getAttribute("company") || "no company";
+    const review = this.getAttribute("review") || "no text";
+    const avatar = this.getAttribute("avatar");
+    const date = this.getAttribute("date") || "no date";
 
     this.innerHTML = `
       <div class="carousel-card-mob">
@@ -360,12 +360,11 @@ class CasesCarousel extends HTMLElement {
   }
 }
 
-
 class InfoCard extends HTMLElement {
   connectedCallback() {
-    const vals = this.getAttribute('title') || "NOT FOUND";
-    const hoverSVG = this.getAttribute('hover') + ".svg";
-    const fields = JSON.parse(this.getAttribute('fields')) || [];
+    const vals = this.getAttribute("title") || "NOT FOUND";
+    const hoverSVG = this.getAttribute("hover") + ".svg";
+    const fields = JSON.parse(this.getAttribute("fields")) || [];
 
     let main = `
       <div class="info-card">
@@ -375,7 +374,7 @@ class InfoCard extends HTMLElement {
         <ul class="info-card-list">
     `;
 
-    fields.forEach(i => {
+    fields.forEach((i) => {
       main += `<li class="info-card-list-item">${i}</li>`;
     });
 
@@ -659,7 +658,7 @@ class FeedbackSlider extends HTMLElement {
           <img src="/public/homepage/arrow-right.svg" alt="next slide" class="next-slide"/>
         </div>
       </div>
-    `
+    `;
   }
 }
 
@@ -744,7 +743,64 @@ class TeamSlider extends HTMLElement {
           <img src="/public/homepage/arrow-right.svg" alt="next slide" class="next-slide"/>
         </div>
       </div>
-    `
+    `;
+  }
+}
+
+class RequestTitle extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <div class="section-header request-header">
+      <h2 class="section-name">Оставьте заявку</h2>
+      <p>Опишите масштаб проекта, сроки, технические требования, бизнес-задачи и другие детали, которые считаете необходимыми. Наша команда изучит их и в ближайшее время свяжется с вами.</p>
+      <p>Давайте вместе сделаем интересный продукт!</p>
+  </div>`;
+  }
+}
+
+class RequestFilaraTitle extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <div class="section-header request-header">
+      <h2 class="section-name-filara">Закажите <span class="section-name-color">бесплатную</span> консультацию и расчет стоимости вашего проекта </h2>
+      <p>Опишите масштаб проекта, сроки, технические требования, бизнес-задачи и другие детали, которые считаете необходимыми. Наша команда изучит их и в ближайшее время свяжется с вами.</p>
+      <p>Давайте вместе сделаем интересный продукт!</p>
+  </div>`;
+  }
+}
+
+class RequestForm extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <div class="request-form">
+        <div class="form-line">
+          <input class="form-field cfn" name="full_name" type="text" placeholder="Имя*" />
+          <input class="form-field cfp" name="phone" type="text" placeholder="Телефон" />
+        </div>
+        <input class="form-field cfe" type="email" name="email" placeholder="Электронная почта*" />
+        <textarea class="form-field textarea cfm" name="about_project" placeholder="О проекте"></textarea>
+        <div class="tags-list">
+          <div class="tag" id="CRM">CRM</div>
+          <div class="tag" id="Mobile app">Мобильное приложение</div>
+          <div class="tag" id="Website">Сайт</div>
+          <div class="tag" id="E-commerce">Интернет-магазин</div>
+          <div class="tag" id="Landing page">Landing-page</div>
+          <div class="tag" id="Redesign">Редизайн</div>
+          <div class="tag" id="MVP">MVP</div>
+          <div class="tag" id="Team extension">Расширение команды</div>
+          <div class="tag" id="Other">Другое</div>
+        </div>
+        <input type="file" id="img-upload" style="display:none"/>
+        <label for="img-upload">
+          <div class="attach-file">
+            <img src="/public/homepage/Paperclip.svg" alt="attach file" />
+            <p>Прикрепите документ</p>
+          </div>
+        </label>
+        <button id="send-request" class="cfbtn">Отправить</button>
+        <p class="politics">Отправкой этого сообщения вы подтверждаете прочтение и согласие c <a href="#">Политикой конфиденциальности</a></p>
+      </div>
+    `;
   }
 }
 
@@ -861,17 +917,18 @@ class Footer extends HTMLElement {
   }
 }
 
-
-customElements.define('main-header', Header);
-customElements.define('review-card', ReviewCard);
-customElements.define('review-card-mobile', ReviewCardMobile);
-customElements.define('grey-card', InfoCard);
-customElements.define('cases-grid', CasesGrid);
-customElements.define('team-grid', TeamCard);
-customElements.define('team-slider', TeamSlider);
-customElements.define('feedback-carousel', FeedbackCarousel);
-customElements.define('feedback-slider', FeedbackSlider);
-customElements.define('cases-carousel', CasesCarousel);
-customElements.define('rewards-carousel', Rewards);
-customElements.define('request-form', Request);
-customElements.define('main-footer', Footer);
+customElements.define("main-header", Header);
+customElements.define("review-card", ReviewCard);
+customElements.define("review-card-mobile", ReviewCardMobile);
+customElements.define("grey-card", InfoCard);
+customElements.define("cases-grid", CasesGrid);
+customElements.define("team-grid", TeamCard);
+customElements.define("team-slider", TeamSlider);
+customElements.define("feedback-carousel", FeedbackCarousel);
+customElements.define("feedback-slider", FeedbackSlider);
+customElements.define("cases-carousel", CasesCarousel);
+customElements.define("rewards-carousel", Rewards);
+customElements.define("main-footer", Footer);
+customElements.define("request-title", RequestTitle);
+customElements.define("request-form", RequestForm);
+customElements.define("request-filara-title", RequestFilaraTitle);
