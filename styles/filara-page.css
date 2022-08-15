@@ -676,3 +676,338 @@ header {
   background: #161616;
   padding: 0 96px;
 }
+
+@media (max-width: 1200px) {
+  .project-stack-block img {
+    height: 12em;
+    width: 10em;
+  }
+}
+
+@media (max-width: 1160px) {
+  .filara-title {
+    font-size: 70px;
+  }
+
+  .primary-text {
+    font-size: 23px;
+  }
+
+  .block-team .indicator {
+    font-size: 28px;
+  }
+
+  .block-team .value-indicator {
+    font-size: 28px;
+  }
+
+  .title-selection,
+  .resume-content-absolute,
+  .title-selection .padding-title,
+  .description-card-main-title,
+  .description-card-main-title,
+  .project-features-main-title,
+  .project-stack-main-title {
+    font-size: 63px;
+  }
+
+  /* ABOUT-CUSTOMER */
+
+  .description {
+    font-size: 25px;
+  }
+
+  .paragraph-text {
+    font-size: 46px;
+  }
+
+  .paragraph-text-stage {
+    font-size: 35px;
+  }
+
+  /* PLANNING STAGES */
+
+  .primary-text-planning {
+    font-size: 22px;
+  }
+
+  .ul-list-planning .ul-li {
+    font-size: 18px;
+  }
+
+  /* DESCRIPTION CARD */
+
+  .description-card {
+    padding: 100px 150px 0 96px;
+  }
+
+  .project-features-container {
+    padding: 100px 40px 0;
+  }
+}
+
+@media (max-width: 1070px) {
+  .project-stack-content {
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .description-card-activity-detail {
+    font-size: 27px;
+  }
+
+  .project-stack-content .project-stack-block {
+    margin-left: 40px;
+  }
+
+  .team-container-row {
+    grid-template-columns: none;
+  }
+
+  .team-container-row .team-container-col {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1060px) {
+  .filara-title {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .primary-text {
+    font-size: 23px;
+    max-width: 80%;
+  }
+
+  .block-team .indicator {
+    font-size: 28px;
+  }
+
+  .block-team .value-indicator {
+    font-size: 28px;
+  }
+
+  .title-selection,
+  .resume-content-absolute,
+  .title-selection .padding-title,
+  .description-card-main-title,
+  .description-card-main-title,
+  .project-features-main-title,
+  .project-stack-main-title {
+    font-size: 58px;
+  }
+
+  .primary-text-planning {
+    font-size: 20px;
+  }
+
+  .progress-line {
+    margin-top: 90px;
+  }
+
+  .about-customer {
+    align-items: center;
+  }
+
+  .description {
+    font-size: 23px;
+    line-height: 40px;
+  }
+
+  .description-card-ul-list {
+    font-size: 22px;
+  }
+
+  .description-workflow-title {
+    font-size: 36px;
+  }
+
+  .description-workflow-detail {
+    font-size: 28px;
+  }
+
+  .project-features-content-block:nth-child(1)
+    .project-features-content-img
+    img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 900px) {
+  .filara-title {
+    font-size: 48px;
+    line-height: 66px;
+  }
+
+  .primary-text {
+    font-size: 20px;
+    max-width: 83%;
+  }
+
+  .block-team .indicator {
+    font-size: 26px;
+  }
+
+  .block-team .value-indicator {
+    font-size: 26px;
+  }
+
+  .title-selection,
+  .resume-content-absolute,
+  .title-selection .padding-title,
+  .description-card-main-title,
+  .description-card-main-title,
+  .project-features-main-title,
+  .project-stack-main-title {
+    font-size: 55px;
+  }
+
+  .paragraph-text-stage {
+    font-size: 33px;
+  }
+
+  .primary-text-planning {
+    font-size: 19px;
+  }
+
+  .progress-line {
+    margin-top: 90px;
+  }
+
+  /* DESCRIPTION CARD */
+
+  .description-card {
+    padding: 90px 130px 0 96px;
+  }
+
+  .description-card-person-name {
+    font-size: 50px;
+  }
+
+  .description-card-ul-list {
+    font-size: 22px;
+  }
+
+  .description-workflow-title {
+    font-size: 34px;
+  }
+
+  .description-workflow-detail {
+    font-size: 25px;
+  }
+
+  /* PROJECT_FEATURES */
+
+  .project-features-content-block:nth-child(odd) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-features-content-block:nth-child(even) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-features-content-block {
+    margin-bottom: 100px;
+  }
+
+  .project-stack-main-title {
+    margin-bottom: 70px;
+  }
+
+  .project-features-info-content {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .project-features-content-block:nth-child(1)
+    .project-features-content-img
+    img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 790px) {
+  .title-selection,
+  .resume-content-absolute,
+  .title-selection .padding-title,
+  .description-card-main-title,
+  .description-card-main-title,
+  .project-features-main-title,
+  .project-stack-main-title {
+    font-size: 47px;
+    line-height: 90px;
+  }
+
+  .info-about-project {
+    margin-left: 15px;
+  }
+
+  .paragraph-text {
+    font-size: 40px;
+  }
+
+  .description-card-main-container {
+    padding: 85px 90px 80px;
+  }
+
+  .description-card-person-img {
+    height: 10em;
+    width: 10em;
+  }
+
+  .description-card-person-name {
+    font-size: 40px;
+  }
+
+  .description-card-person-job {
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  .description-card-activity-control {
+    font-size: 27px;
+  }
+
+  /* PROJECT FEATURES */
+
+  .project-features-title {
+    font-size: 36px;
+  }
+
+  .project-features-info-content {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .project-features-detail {
+    font-size: 27px;
+  }
+
+  .project-features-content-block:nth-child(odd) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-features-content-block:nth-child(even) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-features-content-block {
+    margin-bottom: 100px;
+  }
+
+  .project-stack-main-title {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 680px) {
+}
