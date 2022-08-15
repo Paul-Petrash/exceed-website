@@ -1788,17 +1788,19 @@ footer {
 
 @media (max-width: 570px) {
   .container-footer {
-    padding: 0 0 0 20px;
+    padding: 0 0 0 10px;
   }
 
   .section-name-filara {
     font-size: 20px;
     line-height: 25px;
   }
-  .request-header > p {
+  .request-header > p,
+  .tag,
+  .politics,
+  .attach-file > p {
     font-size: 15px;
   }
-
   .request {
     padding-top: 100px;
   }
