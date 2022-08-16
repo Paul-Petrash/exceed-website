@@ -157,6 +157,10 @@ header {
   text-decoration: none;
 }
 
+.logo > img {
+  width: 150px;
+}
+
 .logo,
 .nav-item,
 #nav-burger,
@@ -1788,7 +1792,7 @@ footer {
 
 @media (max-width: 570px) {
   .container-footer {
-    padding: 0 0 0 10px;
+    padding: 0 15px;
   }
 
   .section-name-filara {

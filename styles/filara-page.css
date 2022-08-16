@@ -592,6 +592,10 @@ header {
   align-items: center;
 }
 
+.project-stack-block {
+  width: 160px;
+}
+
 .project-stack-block:not(:first-child) {
   margin-left: 40px;
 }
@@ -757,7 +761,7 @@ header {
     align-items: flex-start;
   }
 }
-@media (max-width: 1070px) {
+@media (max-width: 1078px) {
   .description-card-activity-detail {
     font-size: 27px;
   }
@@ -774,9 +778,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
   }
-}
 
-@media (max-width: 1060px) {
   .filara-title {
     font-size: 60px;
     line-height: 70px;
@@ -841,7 +843,22 @@ header {
   }
 }
 
+@media (max-width: 1060px) {
+
+}
+
 @media (max-width: 900px) {
+
+  /* PROJECT FEATURES */
+
+  .project-features-content-img img {
+    width: 170%;
+  }
+
+  .project-features-content-block:nth-child(1) .project-features-content-img img {
+    width: 210%;
+  }
+
   .filara-title {
     font-size: 48px;
     line-height: 66px;
@@ -931,11 +948,11 @@ header {
     margin-bottom: 15px;
   }
 
-  .project-features-content-block:nth-child(1)
+  /* .project-features-content-block:nth-child(1)
     .project-features-content-img
     img {
     width: 100%;
-  }
+  } */
 
   /* TEAM */
 
@@ -1071,7 +1088,7 @@ header {
   /* PLANNING STAGES */
 
   .container-planning {
-    padding: 20px 5px;
+    padding: 20px 15px;
   }
 
   .paragraph-text-stage {
@@ -1079,18 +1096,34 @@ header {
   }
   .primary-text-planning {
     font-size: 14px;
+    line-height: 22px;
   }
 
   .ul-list-planning .ul-li {
     font-size: 11px;
+    line-height: 25px;
   }
 
   .block-planning {
-    padding-right: 10px;
+    padding-right: 9px;
   }
 }
 
 @media (max-width: 525px) {
+  /* DESCRIPTION CARD */
+
+  .description-card-main-container {
+    padding: 40px 30px;
+  }
+
+  .description-card-person-container {
+    flex-direction: column;
+  }
+
+  .description-card-ul-list {
+    padding-left: 5px;
+  }
+
   .resume-project {
     padding: 95px 16px;
     display: flex;
@@ -1104,20 +1137,6 @@ header {
 @media (max-width: 470px) {
   .main-content {
     padding: 50px 25px;
-  }
-
-/* DESCRIPTION CARD */
-
-  .description-card-main-container {
-    padding: 40px 30px;
-  }
-
-  .description-card-person-container {
-    flex-direction: column;
-  }
-
-  .description-card-ul-list {
-    padding-left: 5px;
   }
 
 /* WORKFLOW DESCRIPTION */
@@ -1165,16 +1184,6 @@ header {
     margin-bottom: 28px;
   }
 
-  /* PROJECT FEATURES */
-
-  .project-features-content-img img {
-    width: 170%;
-  }
-
-  .project-features-content-block:nth-child(1) .project-features-content-img img {
-    width: 270%;
-  }
-
   /* PROJECT STACK */
 
   .project-stack-main-title {
@@ -1194,6 +1203,16 @@ header {
   .team-container-main-title {
     font-size: 50px;
   }
+}
 
+@media (max-width: 329px) {
+  .primary-text-planning {
+    font-size: 12px;
+    line-height: 22px;
+  }
 
+  .ul-list-planning .ul-li {
+    font-size: 9px;
+    line-height: 20px;
+  }
 }
