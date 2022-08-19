@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  padding: 68px 0;
+  padding: 68px 0 115px;
   margin: 0 auto !important;
 }
 
@@ -38,7 +38,7 @@ header {
 .primary-text {
   margin-top: 36px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 25px;
   line-height: 35px;
   color: rgba(255, 255, 255, 0.7);
@@ -118,7 +118,7 @@ header {
 .resume-project {
   width: 100%;
   display: grid;
-  padding: 95px 0;
+  padding: 95px 0 144px;
   grid-template-columns: 1fr 2fr;
 }
 
@@ -342,7 +342,7 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 80px 0 0;
+  padding: 144px 0 0;
   color: #000000;
 }
 
@@ -485,7 +485,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
   padding: 80px 0 0;
 }
 
@@ -585,11 +584,12 @@ header {
 
 .project-stack-content {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .project-stack-block {
-  width: 160px;
+  width: 171px;
 }
 
 .project-stack-block:not(:first-child) {
@@ -679,6 +679,10 @@ header {
 .container-footer {
   background: #161616;
   padding: 0 100px;
+}
+
+.request {
+  padding-top: 80px !important;
 }
 
 @media (max-width: 1200px) {
@@ -1201,14 +1205,223 @@ header {
   }
 }
 
-@media (max-width: 329px) {
-  .primary-text-planning {
-    font-size: 12px;
-    line-height: 22px;
+@media screen and (max-width: 375px) {
+  header {
+    padding: 25px 0 80px;
+    display: flex;
+    align-items: center;
   }
 
-  .ul-list-planning .ul-li {
-    font-size: 9px;
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo > img {
+    width: 107px !important;
+  }
+
+  #nav-burger {
+    width: 45px !important;
+  }
+
+  .wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* MAIN-CONTENT-WRAPPER */
+  .main-content {
+    padding: 0 16px;
+  }
+
+  .filara-title {
+    font-size: 24px;
+    line-height: 22px;
+    margin-right: 33px;
+  }
+
+  .primary-text {
+    font-size: 14px;
     line-height: 20px;
+    max-width: 90%;
+    margin-top: 8px;
+  }
+
+  .info > .primary-text {
+    color: #fff;
+    margin-top: 16px;
+  }
+
+  .info-comand {
+    padding: 40px 0 80px;
+  }
+
+  .block-team:nth-child(1) {
+    margin-right: 75px;
+  }
+
+  .block-team .indicator {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .block-team .value-indicator {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .about-customer {
+    padding: 80px 16px 0;
+  }
+
+  /* INFO-CUSTOMER-WRAPPER */
+  .info-about-company {
+    padding: 0;
+  }
+
+  .title-selection {
+    text-align: start;
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  .description {
+    margin-top: 16px;
+    text-align: start;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .resume-project {
+    padding: 80px 16px;
+  }
+
+  .resume-content-absolute {
+    font-size: 24px;
+    line-height: 34px;
+    margin: 0;
+    border-bottom: 4px solid #9300fc;
+  }
+
+  .title-info {
+    margin: 0 !important;
+  }
+
+  .paragraph-text {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
+    margin-top: 24px;
+  }
+
+  /* PLANNING STAGES */
+  .container-planning {
+    background: none;
+    padding: 0 16px 20px;
+  }
+
+  .progress-line {
+    margin-top: 25px;
+  }
+
+  /* DESCRIPTION CARD 1 */
+  .description-card-main-title {
+    padding: 80px 16px 0 !important;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .description-card-content {
+    background: none;
+    border-radius: 0;
+    padding: 0 16px;
+  }
+
+  .description-card-main-container {
+    padding: 0;
+  }
+
+  .description-card-person-container {
+    flex-direction: row;
+  }
+
+  .description-card-person-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .description-card-person-info {
+    margin-left: 16px;
+  }
+
+  .description-card-person-name {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .description-card-person-job {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .description-card-activity {
+    margin-top: 32px;
+    background: rgba(192, 110, 204, 0.3);
+    border-radius: 0 20px 20px;
+    padding: 16px;
+  }
+
+  .description-card-activity-detail {
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 8px;
+  }
+
+  .description-card-ul-list {
+    padding-left: 17px;
+  }
+
+  .description-card-ul-list li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* WORKFLOW DESCRIPTION */
+  .description-workflow-content {
+    padding-top: 32px;
+  }
+
+  .description-workflow-main-content {
+    padding: 0 16px;
+  }
+
+  .description-workflow-title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  .description-workflow-detail {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .project-features-content-img {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 355px) {
+ .block-planning {
+   padding: 0;
+ }
+
+ .description-workflow-title {
+   font-size: 20px;
+ }
+
+  .request {
+    display: block !important;
   }
 }
